@@ -9,3 +9,23 @@ Those items that can be automated should be (using tools like ESLint and its plu
 
 ## Contents
 1. [Naming things](naming-things.md)
+1. Code flow
+1. Code structure
+1. Code "style" (non-formatting)
+1. Functional
+1. Error handling
+1. Tests
+1. Files
+1. Formatting
+1. Dependencies
+1. Tech specifics: CSS
+1. Tech specifics: JavaScript
+1. Comments
+1. Commits
+1. Pull request
+1. Requirements
+1. Future
+1. UI text
+1. Features
+1. Bug fixes
+1. Meta
