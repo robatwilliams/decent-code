@@ -10,6 +10,8 @@
 
 **Avoid letting poor/inconsistent names from other contexts creep in to the code.** Such contexts include legacy code, libraries, and other applications we interact with. Establish a boundary within which these naming guidelines are adhered to, and defend it from outside pollution.
 
+**It's ok for user-facing names to be different.** Names shown on the UI/output are often requirements, and appear in their own context. When such names are poor or not appropriate from a code perspective, use a different one where possible.
+
 **Use acronyms and abbreviations sparingly.** Code is generally clearer and easier to read without them. Universally accepted ones like *id* are an exception to this rule, including ones from the business domain.
 
 **Avoid unnecessarily long names.** Aim not to be any longer than required to convey meaning. Long names increase the need for statements and method calls to span multiple lines, which makes code less readable. This rule implies avoiding use of a type's full name as a variable/parameter name where not necessary.
