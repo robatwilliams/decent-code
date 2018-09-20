@@ -23,9 +23,7 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. Comments
 1. Commits
 1. Pull request
-1. Requirements
-1. Future
+1. [Features](features.md)
 1. [UI text](ui-text.md)
-1. Features
 1. [Bug fixes](bug-fixes.md)
 1. [Meta](meta.md)
