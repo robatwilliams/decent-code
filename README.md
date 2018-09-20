@@ -28,4 +28,4 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. [UI text](ui-text.md)
 1. Features
 1. [Bug fixes](bug-fixes.md)
-1. Meta
+1. [Meta](meta.md)
