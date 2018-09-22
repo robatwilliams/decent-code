@@ -15,7 +15,7 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. Functional
 1. Error handling
 1. Tests
-1. Files
+1. [Files](files.md)
 1. [Formatting](formatting.md)
 1. Dependencies
 1. Tech specifics: CSS
