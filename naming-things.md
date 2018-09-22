@@ -33,3 +33,7 @@
 **Spell correctly and consistently.** Doing so helps avoid errors, and improves code searchability. Where multiple correct spellings exist (e.g. "color"), follow platform conventions.
 
 **Follow existing conventions around you.** These may be in a particular method, the codebase as a whole, or the technology/platform you're working with. Strive for consistency, and avoid doing differently without good reason.
+
+----
+
+This Gist may be useful: [List of names that tend to be useful in programming](https://gist.github.com/robatwilliams/1f089398144867e629bdc343a5cc5be6)
