@@ -18,6 +18,8 @@
 
 **Avoid over qualifying names.** When context for a name has already been established, for example by being within a class or method, it's not necessary to re-state that context. A *task*, for example, doesn't need a *taskCompleted*.
 
+**Avoid overusing "get" as a method name prefix.** Getters return values. Prefer more informative alternatives such as "request", "fetch", "find", or "query" where appropriate.
+
 **Consider renaming existing items when adding a new one causes ambiguity/conflict.** This often yields greater clarity than only qualifying the new one to distinguish it.
 
 **Consider naming related things so they appear together in alphabetical order.** This aids discoverability when using an alphabetical ordering convention. *Example: data, dataError, dataLoaded.*
