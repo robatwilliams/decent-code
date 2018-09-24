@@ -1,6 +1,6 @@
 # Formatting
 
-*Almost all formatting issues should be automated through tools such as ESLint or Checkstyle. Violations should fail the build.*
+*Almost all formatting issues should be automated through tools such as ESLint or Checkstyle. Violations should fail the build, lest they accummulate and make new ones hard to notice.*
 
 *Local development (file-watch) builds need not fail on violations, lest it become an annoying inconvenience. Editor/IDE settings matching the requirements should be checked in and shared, for example using [EditorConfig](https://editorconfig.org/) files. Also consider running the automated checks using a source control pre-commit hook.*
 
