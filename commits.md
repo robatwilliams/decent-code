@@ -29,3 +29,10 @@
 **Reference relevant issue tracker IDs, as per project conventions.** These identifiers allow further information around a change to be found conveniently. Most commonly, it's for the issue currently being worked on, but could also be other useful and relevant issues. The former case can be automated using a source control branch-detecting commit message hook, such as [this one](https://github.com/robatwilliams/git-ticket-number-prefix-hook).
 
 *For more on why good commit messages matter, I recommend the introduction section in particular of this ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) article by Chris Beams.*
+
+
+## Committing
+
+**Preserve line history.** Source control tools can display a line-by-line view of the last change made to each line (often called "annotate" or "blame"). Committing changes and then making later commits to change the code back to how it was, makes this feature less useful. Editing such commits, or combining ("squashing") groups of commits where there has been significant churn, can help in such situations.
+
+**Look at what's being committed.** It's all too easy to add all changes present in your working folder, ready for a quick commit. Adding each file individually however, quickly reviewing and the changes in each one as you go, gives you an opportunity to notice anything that's amiss.
