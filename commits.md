@@ -18,3 +18,14 @@
 **Avoid including left-over unused code.** Such code is often from experimentation, trying different approaches, or trial-and-error. CSS tends to be quite susceptible to this.
 
 **Avoid accidentally including unwanted files such as personal configuration and log files.** Use your source control tool's [ignore-file feature](https://git-scm.com/docs/gitignore) to prevent accidentally including such files. Check in the ignore file. Configuration that needs to be consistent across the team should however be checked in.
+
+
+## Messages
+
+**Summarise the change in the first ~70 characters.** This allows an at-a-glance understanding when reading the log. Many source control tools hide the rest of the message by default.
+
+**Include the "why" as well as the "what".** Explain briefly what's being done. This is in the context of the commit - it needs to be more granular than just the headline name of a big feature. Bear in mind that the detail of the "what" can be found in the diff. The "why" however isn't always apparent or immediately clear, so do include it in the message. For more complex changes or refactorings, a brief description of the "what" can be helpful.
+
+**Reference relevant issue tracker IDs, as per project conventions.** These identifiers allow further information around a change to be found conveniently. Most commonly, it's for the issue currently being worked on, but could also be other useful and relevant issues. The former case can be automated using a source control branch-detecting commit message hook, such as [this one](https://github.com/robatwilliams/git-ticket-number-prefix-hook).
+
+*For more on why good commit messages matter, I recommend the introduction section in particular of this ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) article by Chris Beams.*
