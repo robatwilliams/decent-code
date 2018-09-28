@@ -1,6 +1,6 @@
 # Files
 
-**Named well and as per conventions.** Refer to "naming things". Follow project conventions (e.g. suffixes) and casing style.
+**Named well and as per conventions.** Refer to [naming things](naming-things.md). Follow project conventions (e.g. suffixes) and casing style.
 
 **In an appropriate folder.** Considerations include purpose and functional area.
 
