@@ -2,6 +2,8 @@
 
 **Avoid relying on the difference between `null` and `undefined`.** Doing so tends to cause fragile code. Use non-coercing equality (`==`) against `null` in equality checks for either of them. Avoid using both to signify a different kind of "no value" situation, such as "unknown field" vs. "no value for today".
 
+**Beware the zero case with truthy/falsy checks.** If a number is present, it often needs to be treated the same way as any other number - not the same way as other falsy values.
+
 **Floating point arithmetic, with its usual pitfalls.** Consider doing as little as possible on the client side, and/or using a [number library for JavaScript](https://github.com/MikeMcl/big.js/wiki).
 
 **Beware feature support in different browsers.** Either only use those supported by all browsers the application supports, or do progressive enhancement. Refer to the [Can I use](https://caniuse.com/) reference, browser compatibility tables on [MDN documentation pages](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#Browser_compatibility), and the [ECMAScript compatibility tables](http://kangax.github.io/compat-table/es6/). Use a [linter plugin](https://github.com/amilajack/eslint-plugin-compat) to automate compatibility checks.  Some features may be transpiled by your build setup, or polyfilled - making them available in older browsers.
