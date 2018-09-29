@@ -23,8 +23,11 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. [Files](files.md)
 1. [Formatting](formatting.md)
 1. Dependencies
-1. Tech specifics: CSS
-1. [Tech specifics: JavaScript](tech-javascript.md)
+1. Tech specifics
+   1. CSS
+   1. HTML
+   1. Java
+   1. [JavaScript](tech-javascript.md)
 1. [Comments](comments.md)
 1. [Commits](commits.md)
 1. Pull request
