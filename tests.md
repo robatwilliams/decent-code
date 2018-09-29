@@ -21,3 +21,14 @@
 **Avoid tests that test the mocking library.** Usually accidental, such tests assert nothing about our code and instead for example check that the method stubbing feature works.
 
 **Include tests for edge cases and unhappy paths.** We need to be confident that our code works in all cases, not just the "normal" ones which may occur the vast majority of the time. Examples include errors, timeouts, invalid data, no data, and boundary values.
+
+
+## Structure and isolation
+
+**Avoid shared state between tests.** Shared state breaks test isolation, usually leading to a mess involving false passes or false failures depending on which tests are run together and in which order. Examples include shared variables (usually to avoid redeclaration), re-used test instances, and re-used mocks. Always start afresh.
+
+**Avoid shared setup logic in hooks.** This means block(s) of code that the test framework runs before a collection of individual tests. Taken to extreme, it involves nested groups of tests, with a shared setup block at each level. It encourages the use of shared state, allows accidental use of shared state, makes setup difficult to follow, and makes tailoring setup for individual tests difficult.
+
+**Abstract common setup logic into utility functions.** This avoids pretty much all the issues that arise from using hooks. Extract shared setup logic into utility functions, and use them directly and as-needed from individual tests. The functions return objects ready for use in the test, and often accept parameters (data, or options) to allow tailoring the setup for individual tests. The latter makes it easy to see the difference in setup between each test.
+
+**Avoid relying on the current system time and time zone.** Such tests don't test the same thing every time they're run, and are likely to cause issues in the future or when run by people or CI servers in different locations. Inject the current time into your code instead, allowing specific fixed times to be injected in tests.
