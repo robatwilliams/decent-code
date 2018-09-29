@@ -6,7 +6,7 @@ Created to help everyone level-up their coding and code-reviewing, because that'
 
 I hope it can help you write better code, be a more effective reviewer, and pique your interest in further learning. It's not a long read.
 
-This isn't a style guide, a declaration of The Right Way, a comprehensive guide to writing good code and being a good contributor, or a shortcut to becoming a good developer. To read about review process, conduct, collaboration, and tools, check out [the code review awesome list](https://github.com/joho/awesome-code-review).
+This isn't a style guide, a declaration of The Right Way, a comprehensive guide to writing good code and being a good contributor, or a shortcut to becoming a good developer. Things that should be picked up by appropriately configured automated tools are generally not mentioned. To read about review process, conduct, collaboration, and tools, check out [the code review awesome list](https://github.com/joho/awesome-code-review).
 
 Code review is more than a checklist process, but many of the things we look for are simple and there are too many of them to remember. Checklists help us remember, and inform contributors upfront of expectations. This helps reviewers' time to be better spent on the bigger and less simple things, and reduce contributors' time spent on revisions.
 
