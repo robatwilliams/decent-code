@@ -8,3 +8,16 @@
 **Keep test code close to the code they're testing.** Read: [files](files.md).
 
 **Single focus and purpose per test.** Tests with wide scope are less clear, and make it harder to identify the cause of failures. Aim for failures only related to the case described in the test name, and make assertions as required.
+
+
+## What to test
+
+**Balance value against cost.** Tests require effort to write and maintain. Consider for a given piece of code (however small) if the confidence you gain in its correctness and avoidance of future breakages is worth it against how time consuming and difficult it is to test. This item is not an excuse for antipatterns that make code difficult to test.
+
+**Coverage is a guide; it does not imply adequacy nor inadequacy.** Coverage indicates which paths through the code were taken while executing the tests. It doesn't say anything about good choice of test cases, or making appropriate assertions. Tests for code giving high coverage may need improvement, and tests for code giving lower coverage may be perfectly adequate. Avoid writing low-value tests to bump up the coverage metrics.
+
+**Avoid tests that test that the code "does what it does".** Such tests typically check that certain mocks are called, and don't test any logic of the unit under test (if the unit even has any). They are brittle, an overhead for refactoring, noise, and low-value.
+
+**Avoid tests that test the mocking library.** Usually accidental, such tests assert nothing about our code and instead for example check that the method stubbing feature works.
+
+**Include tests for edge cases and unhappy paths.** We need to be confident that our code works in all cases, not just the "normal" ones which may occur the vast majority of the time. Examples include errors, timeouts, invalid data, no data, and boundary values.
