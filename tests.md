@@ -41,3 +41,12 @@
 **Use the most appropriate assertions.** Test frameworks include assertions other than equality. They clarify the test code, and produce better failure messages.
 
 **Ensure that assertions in asynchronous code are actually run.** Use test framework specific techniques to ensure they are run. Some frameworks provide synchronous [assertions](https://jestjs.io/docs/en/expect#expectassertionsnumber) that assert that later assertions are in fact made.
+
+
+## Other
+
+**Mock immediate dependencies rather than transitive ones.** This keeps the test independent and focused on the single unit.
+
+**Avoid re-using mock runtime data as mock test data.** Such data is designed for a different purpose (demo, usually), and should remain modifiable without affecting the tests.
+
+**Avoid waiting for elapsed clock time.** Tests that wait this way for asynchronous code and timers are slow to run; this becomes a big problem when you have hundreds of them. Instead, use your test framework's time-mocking facility which allows time to be advanced immediately.
