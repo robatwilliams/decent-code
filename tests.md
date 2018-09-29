@@ -32,3 +32,12 @@
 **Abstract common setup logic into utility functions.** This avoids pretty much all the issues that arise from using hooks. Extract shared setup logic into utility functions, and use them directly and as-needed from individual tests. The functions return objects ready for use in the test, and often accept parameters (data, or options) to allow tailoring the setup for individual tests. The latter makes it easy to see the difference in setup between each test.
 
 **Avoid relying on the current system time and time zone.** Such tests don't test the same thing every time they're run, and are likely to cause issues in the future or when run by people or CI servers in different locations. Inject the current time into your code instead, allowing specific fixed times to be injected in tests.
+
+
+## Assertions
+
+**Use strict assertions.** These strengthen the test and make it more likely to detect future regressions. Examples include object identity equality vs. logical equality, and boolean values vs. truthy/falsy.
+
+**Use the most appropriate assertions.** Test frameworks include assertions other than equality. They clarify the test code, and produce better failure messages.
+
+**Ensure that assertions in asynchronous code are actually run.** Use test framework specific techniques to ensure they are run. Some frameworks provide synchronous [assertions](https://jestjs.io/docs/en/expect#expectassertionsnumber) that assert that later assertions are in fact made.
