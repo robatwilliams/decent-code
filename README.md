@@ -18,7 +18,8 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. Code structure
 1. Code "style" (non-formatting)
 1. Functional
-1. Error handling
+1. [Error handling](error-handling.md)
+1. Logging
 1. [Tests](tests.md)
 1. [Files](files.md)
 1. [Formatting](formatting.md)
