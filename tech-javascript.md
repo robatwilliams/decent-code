@@ -14,6 +14,8 @@
 
 **String `replace()` only replaces the first occurrence when using a string as the pattern.** Global replace requires a regular expression to be used.
 
+**Avoid duck type checks wherever possible.** They are easily broken if changes are made to the duck, and do not convey intention well.
+
 **Avoid causing layout thrashing through interleaved reads and writes.** Group reads and writes to [properties that cause layout/reflow](https://gist.github.com/paulirish/5d52fb081b3570c81e3a) as much as possible.
 
 **Avoid excessive work in response to user input.** This includes computation, screen updates, and requests to the server. Consider debouncing or throttling keyboard input and some types of mouse events.
