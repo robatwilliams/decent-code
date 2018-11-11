@@ -6,7 +6,7 @@
 
 **Floating point arithmetic, with its usual pitfalls.** Consider doing as little as possible on the client side, and/or using a [number library for JavaScript](https://github.com/MikeMcl/big.js/wiki).
 
-**Beware feature support in different browsers.** Either only use those supported by all browsers the application supports, or do progressive enhancement. Refer to the [Can I use](https://caniuse.com/) reference, browser compatibility tables on [MDN documentation pages](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#Browser_compatibility), and the [ECMAScript compatibility tables](http://kangax.github.io/compat-table/es6/). Use a [linter plugin](https://github.com/amilajack/eslint-plugin-compat) to automate compatibility checks.  Some features may be transpiled by your build setup, or polyfilled - making them available in older browsers.
+**Beware feature support in different browsers.** Either only use those supported by all browsers the application supports, or do progressive enhancement. Refer to the [Can I use](https://caniuse.com/) reference, browser compatibility tables on [MDN documentation pages](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#Browser_compatibility), and the [ECMAScript compatibility tables](http://kangax.github.io/compat-table/es6/). Use a [linter plugin](https://github.com/amilajack/eslint-plugin-compat) to automate compatibility checks. Some features may be transpiled by your build setup, or polyfilled - making them available in older browsers.
 
 **Beware methods that mutate when it might not be expected.** These include Array's in-place `reverse()`, and many Moment.js methods (seriously consider an alternative such as date-fns or Luxon).
 
