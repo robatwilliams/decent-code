@@ -10,6 +10,6 @@
 
 **Date, time, time zones, and summer/winter time transitions are handled correctly.** Understand the concepts of time, and have a consistent application-wide strategy for dealing with them. Use a library/SDK for manipulating time, and treat manual manipulation as a warning sign (it's with good reason that libraries don't support some operations: they don't make sense). Take care not to break the "opposite case" when fixing summer/winter time problems (or transition-related ones). Applications shouldn't usually include unit tests for libraries they use, but consider making an exception in this area for non-trivial cases - not to test the library, but to test that you're using it correctly.
 
-**Requests for data are well thought-out.** They are made at appropriate moments, not repeated unnecessarily, and don't return excessive volume beyond what the application needs (use paging). Caching is used where appropriate, and disabled where not.
+**Requests/calls for data are well thought-out.** They are made at appropriate moments, not repeated unnecessarily, and don't return excessive volume beyond what the application needs (use paging/limits). Caching is used where appropriate, and disabled where not. Examples include requests to APIs, and database calls.
 
 **Secondary UI states are handled.** These include: loading, error, no data, and too much data to show at once.
