@@ -15,23 +15,23 @@ Those items that can be automated should be (using tools like ESLint and its plu
 ## Contents
 1. [Naming things](naming-things.md)
 1. [Code flow](code-flow.md)
-1. Code structure
-1. Code "style" (non-formatting)
+1. Code structure 🚧
+1. Code "style" (non-formatting) 🚧
 1. [Functional](functional.md)
 1. [Error handling](error-handling.md)
-1. Logging
+1. Logging 🚧
 1. [Tests](tests.md)
 1. [Files](files.md)
 1. [Formatting](formatting.md)
-1. Dependencies
+1. Dependencies 🚧
 1. Tech specifics
-   1. CSS
+   1. CSS 🚧
    1. [HTML](tech-html.md)
-   1. Java
+   1. Java 🚧
    1. [JavaScript](tech-javascript.md)
 1. [Comments](comments.md)
 1. [Commits](commits.md)
-1. Pull request
+1. Pull request 🚧
 1. [Features](features.md)
 1. [UI text](ui-text.md)
 1. [Bug fixes](bug-fixes.md)
