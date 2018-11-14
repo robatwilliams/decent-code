@@ -10,7 +10,7 @@
 
 **Avoid using `setTimeout()` or similar in a fragile or ununderstood way.** Scenarios do come up that may be tempting to implement/fix by running a piece of code after a carefully chosen (usually by trial and error) time delay. The reason for such approaches working (at least some of the time) is rarely known to the author, and lead to fragile and unpredictable behaviour - especially when the delay is non-zero.
 
-**Beware methods that mutate when it might not be expected.** These include Array's in-place `reverse()`, and many Moment.js methods (seriously consider an alternative such as date-fns or Luxon).
+**Beware instance methods that mutate when it might not be expected.** These include Array's in-place `reverse()`, and many Moment.js methods (seriously consider an alternative such as date-fns or Luxon).
 
 **Array `sort()` converts elements to strings and sorts them alphabetically by default.** For anything but strings, this is unlikely what's wanted - a comparator function must be given.
 
@@ -22,4 +22,4 @@
 
 **Avoid excessive work in response to user input.** This includes computation, screen updates, and requests to the server. Consider debouncing or throttling keyboard input and some types of mouse events.
 
-**Avoid using outdated techniques.** Language advancements continue to bring about newer and better alternatives to many legacy techniques. Use them.
+**Avoid using outdated techniques.** Language advancements continue to bring about newer and better alternatives to many legacy techniques. Use them. Examples include async/await, and template strings.
