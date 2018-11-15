@@ -23,7 +23,7 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. [Tests](tests.md)
 1. [Files](files.md)
 1. [Formatting](formatting.md)
-1. Dependencies 🚧
+1. [Dependencies](dependencies.md)
 1. Tech specifics
    1. CSS 🚧
    1. [HTML](tech-html.md)
