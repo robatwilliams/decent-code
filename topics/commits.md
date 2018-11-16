@@ -15,7 +15,7 @@
 
 **Avoid including unrelated and unexplained changes.** An extension of the first item. Such changes are often [formatting](formatting.md) issues, or mistakes made while resolving merge/rebase conflicts.
 
-**Avoid including left-over unused code.** Such code is often from experimentation, trying different approaches, or trial-and-error. CSS in particular tends to be quite susceptible to this.
+**Avoid including left-over unused code.** Such code is often from experimentation, trying different approaches, or trial-and-error. It may not be having an effect, or even running at all. CSS in particular tends to be quite susceptible to this.
 
 **Avoid accidentally including unwanted files such as personal configuration and log files.** Use your source control tool's [ignore-file feature](https://git-scm.com/docs/gitignore) to prevent accidentally including such files. Check in the ignore file. Configuration that needs to be consistent across the team should however be checked in.
 

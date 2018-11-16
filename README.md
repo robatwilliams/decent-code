@@ -31,7 +31,7 @@ Those items that can be automated should be (using tools like ESLint and its plu
    1. [JavaScript](topics/tech-javascript.md)
 1. [Comments](topics/comments.md)
 1. [Commits](topics/commits.md)
-1. Pull request 🚧
+1. [Pull request](topics/pull-request.md)
 1. [Features](topics/features.md)
 1. [UI text](topics/ui-text.md)
 1. [Bug fixes](topics/bug-fixes.md)
