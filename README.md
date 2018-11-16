@@ -13,26 +13,26 @@ Code review is more than a checklist process, but many of the things we look for
 Those items that can be automated should be (using tools like ESLint and its plugins). Manual detection and correction isn't reliable, doesn't scale well, and consumes focus better spent elsewhere.
 
 ## Contents
-1. [Naming things](naming-things.md)
-1. [Code flow](code-flow.md)
+1. [Naming things](topics/naming-things.md)
+1. [Code flow](topics/code-flow.md)
 1. Code structure 🚧
 1. Code "style" (non-formatting) 🚧
-1. [Functional](functional.md)
-1. [Error handling](error-handling.md)
+1. [Functional](topics/functional.md)
+1. [Error handling](topics/error-handling.md)
 1. Logging 🚧
-1. [Tests](tests.md)
-1. [Files](files.md)
-1. [Formatting](formatting.md)
-1. [Dependencies](dependencies.md)
+1. [Tests](topics/tests.md)
+1. [Files](topics/files.md)
+1. [Formatting](topics/formatting.md)
+1. [Dependencies](topics/dependencies.md)
 1. Tech specifics
    1. CSS 🚧
-   1. [HTML](tech-html.md)
+   1. [HTML](topics/tech-html.md)
    1. Java 🚧
-   1. [JavaScript](tech-javascript.md)
-1. [Comments](comments.md)
-1. [Commits](commits.md)
+   1. [JavaScript](topics/tech-javascript.md)
+1. [Comments](topics/comments.md)
+1. [Commits](topics/commits.md)
 1. Pull request 🚧
-1. [Features](features.md)
-1. [UI text](ui-text.md)
-1. [Bug fixes](bug-fixes.md)
-1. [Meta](meta.md)
+1. [Features](topics/features.md)
+1. [UI text](topics/ui-text.md)
+1. [Bug fixes](topics/bug-fixes.md)
+1. [Meta](topics/meta.md)
