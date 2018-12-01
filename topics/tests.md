@@ -36,7 +36,7 @@
 
 ## Assertions
 
-**Use strict assertions.** These strengthen the test and make it more likely to detect future regressions. Examples include object identity equality vs. logical equality, and boolean values vs. truthy/falsy.
+**Use strict assertions.** These strengthen the test and make it more likely to detect future regressions. Examples include strict equality, and errors/exceptions of specific types with specific messages.
 
 **Use the most appropriate assertions.** Test frameworks include assertions other than equality. They clarify the test code, and produce better failure messages.
 
