@@ -1,16 +1,29 @@
 # decent-code
+> A concise guide to writing better code
 
-Guidance and checklist for some of the things I look out for in code review.
+A guide/checklist to help people level-up their coding and code-reviewing. It's about 25 pages of A4 size 11 text.
 
-Created to help everyone level-up their coding and code-reviewing, because that's the only way of scaling the process.
 
-I hope it can help you write better code, be a more effective reviewer, and pique your interest in further learning. It's not a long read.
+## Motivation
+It can be hard to maintain consistency and quality while scaling code review.
 
-This isn't a style guide, a declaration of The Right Way, a comprehensive guide to writing good code and being a good contributor, or a shortcut to becoming a good developer. Things that should be picked up by appropriately configured automated tools are generally not mentioned. To read about review process, conduct, collaboration, and tools, check out [the code review awesome list](https://github.com/joho/awesome-code-review).
+It's rarely practical for everyone or any one person to review every single line of code, while also getting on with their own work and responsibilities. As reviewers we all have our own experience, technical/project knowledge, and proficiency level. Individually applying these improves code quality, but it's a reactive approach and tends not to be consistent.
+
+By having, and through creating, a shared reference for practices and quality, a team can go some way towards overcoming these issues.
+
+This is a personal guide, based on some of the things I look out for. I hope it can help you write better code, be a more effective reviewer, and pique your interest in further learning.
+
+
+## Code review
 
 Code review is more than a checklist process, but many of the things we look for are simple and there are too many of them to remember. Checklists help us remember, and inform contributors upfront of expectations. This helps reviewers' time to be better spent on the bigger and less simple things, and reduce contributors' time spent on revisions.
 
-Those items that can be automated should be (using tools like ESLint and its plugins). Manual detection and correction isn't reliable, doesn't scale well, and consumes focus better spent elsewhere.
+Those items that can be automated should be (using tools like ESLint and its plugins, or Checkstyle). Manual detection and correction isn't reliable, doesn't scale well, and consumes focus better spent elsewhere.
+
+
+## What this isn't
+This isn't a style guide, a declaration of The Right Way, a comprehensive guide to writing good code and being a good contributor, or a shortcut to becoming a good developer. Things that should be picked up by appropriately configured automated tools are generally not mentioned. To read about review process, conduct, collaboration, and tools, check out [the code review awesome list](https://github.com/joho/awesome-code-review).
+
 
 ## Contents
 1. [Naming things](topics/naming-things.md)
