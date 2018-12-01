@@ -27,7 +27,7 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. Tech specifics
    1. CSS 🚧
    1. [HTML](topics/tech-html.md)
-   1. Java 🚧
+   1. [Java](topics/java.md)
    1. [JavaScript](topics/tech-javascript.md)
 1. [Comments](topics/comments.md)
 1. [Commits](topics/commits.md)
