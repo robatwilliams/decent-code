@@ -21,3 +21,14 @@
 **Avoid violating or by-passing applied design patterns.** When patterns or other design features have been put in place, avoid by-passing, subverting, or dismantling them.
 
 **Encapsulate application-wide conventions.** Repeating even seemingly trivial conventions makes them difficult to identify, apply consistently, and modify. Conventions could be functionality-related (e.g. display of numbers/dates), or code-related (e.g. our pattern for implementing X). Some techniques can be applied in a single place (e.g. serializer configuration), while others are defined in a single place but need to be used/applied by the programmer wherever relevant (e.g. components, utility functions).
+
+
+## Ordering
+
+**Think about the order of things, generally.** Ordering things (e.g. methods, config files) in a well-thought-out way makes it quicker and easier to find what you're looking for. This includes determining if it exists at all. It also helps you notice related things you weren't looking for but should probably be aware of. The best order for most things isn't by the time in which they were added. Some things need individual judgement, while others are partially/completely well-defined (e.g. alphabetical, [lifecycle methods](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)).
+
+**Order lifecycle methods in the order that they're called.** It's intuitive to use this already-established and familiar order.
+
+**Put related methods together.** It's easier to follow what code is doing when not much navigation around the file is needed.
+
+**Put important code at the top, and less important code at the bottom.** This is known as "newspaper code structure"; start with the important (headline), then read on for further detail in descending order of significance (summary paragraph, full article text). It allows the reader to quickly understand the key things about the file without needing to scan over all of it. Applying this as an example, constructors would go near the top, and helper methods and getters/setters would go at the bottom.
