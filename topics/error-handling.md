@@ -17,7 +17,7 @@
 
 ## Information management and capture
 
-**Include relevant and contextual information in exception/log messages.** Such information aids diagnosis of problems. Examples include problematic values, state, and identifiers.
+**Include relevant and contextual information in exception/log messages.** Such information aids diagnosis of problems. Examples include problematic values, state, and identifiers. For custom exceptions, some of this information can be made mandatory in the constructor as opposed to the common practice of accepting a single string message.
 
 **Consider catch-wrap-rethrow to add a more helpful message and/or contextual information.** The original thrower may not have had much context or data to construct a particularly useful message. Callers of such throwers can catch such exceptions and wrap them in more informative exceptions before throwing those further.
 
