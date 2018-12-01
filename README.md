@@ -15,7 +15,7 @@ Those items that can be automated should be (using tools like ESLint and its plu
 ## Contents
 1. [Naming things](topics/naming-things.md)
 1. [Code flow](topics/code-flow.md)
-1. Code structure 🚧
+1. [Code structure](topics/code-structure.md)
 1. Code "style" (non-formatting) 🚧
 1. [Functional](topics/functional.md)
 1. [Error handling](topics/error-handling.md)
