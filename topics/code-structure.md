@@ -9,8 +9,6 @@
 
 **Avoid non-trivial nested functions/lambdas.** Code can often be made clearer by extracting them to top-level or member functions.
 
-**Avoid long parameter lists.** They are prone to callers passing parameters in the wrong order, even with the helping hand of IDEs. This is especially the case in untyped languages, or when parameters are of the same type. Use a parameters object or a builder instead.
-
 **Strive to only depend on close/related things.** Changing far-away code/behaviour shouldn't break things. Where unavoidable, document such relationships. See [comments](comments.md).
 
 
