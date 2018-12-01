@@ -2,7 +2,7 @@
 
 *This is rather a short topic, as I worked mainly with other technologies while I gathered notes for this guide (2018).*
 
-*I consider [Effective Java](https://www.amazon.co.uk/Effective-Java-Joshua-Bloch/dp/0134685997) mandatory reading for any Java developer, and also highly recommend [Java Concurrency in Practice](https://www.amazon.co.uk/Java-Concurrency-Practice-Brian-Goetz) and [Java 8 in Action](https://www.amazon.co.uk/Java-Action-Lambdas-functional-style-programming/dp/1617291994/).*
+*I consider [Effective Java](https://www.goodreads.com/book/show/34927404-effective-java) mandatory reading for any Java developer, and also highly recommend [Java Concurrency in Practice](https://www.goodreads.com/book/show/127932.Java_Concurrency_in_Practice) and [Java 8 in Action](https://www.goodreads.com/book/show/20534354-java-8-in-action).*
 
 ----
 
