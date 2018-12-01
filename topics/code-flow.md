@@ -30,7 +30,7 @@
 
 ## Checks
 
-**Avoid unnecessary null checks.** There are some things in the technical and business logic domains that we can fairly confidently rely on not to ever be null. Adding explicit checks for them bloats the code.
+**Avoid unnecessary null checks.** There are some things in the technical and business logic domains that we can fairly confidently rely on not to ever be null. Adding explicit checks for them can hide problems, and they bloat the code.
 
 **Avoid inappropriate null/state checks (or those in inappropriate locations) that patch over underlying issues.** These are usually checks that skip/branch logic in invalid or edge-case scenarios, done in one place to avoid/conceal a problem that has originated elsewhere. Instead, prefer to address/fix the root cause issue. Also be aware of checks in callers that should be in callees, and vice versa.
 
