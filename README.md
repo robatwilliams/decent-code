@@ -36,3 +36,11 @@ Those items that can be automated should be (using tools like ESLint and its plu
 1. [UI text](topics/ui-text.md)
 1. [Bug fixes](topics/bug-fixes.md)
 1. [Meta](topics/meta.md)
+
+
+## Further reading
+The following books on generally writing good code are popular and highly-rated.
+
+* [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code)
+* [Code Complete](https://www.goodreads.com/book/show/4845.Code_Complete)
+* [97 Things Every Programmer Should Know](https://www.goodreads.com/book/show/7003902-97-things-every-programmer-should-know) *(free to [read online](https://github.com/97-things/97-things-every-programmer-should-know)*)
