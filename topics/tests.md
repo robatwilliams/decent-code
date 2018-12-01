@@ -27,7 +27,7 @@
 
 **Avoid shared state between tests.** Shared state breaks test isolation, usually leading to a mess involving false passes or false failures depending on which tests are run together and in which order. Examples include shared variables (usually to avoid redeclaration), re-used test instances, and re-used mocks. Always start afresh.
 
-**Avoid shared setup logic in hooks.** This means block(s) of code that the test framework runs before a collection of individual tests. Taken to extreme, it involves nested groups of tests, with a shared setup block at each level. It encourages the use of shared state, allows accidental use of shared state, makes setup difficult to follow, and makes tailoring setup for individual tests difficult.
+**Avoid shared setup logic in hooks.** This means block(s) of code that the test framework runs before a collection of individual tests. Taken to extreme, it involves nested groups of tests, with a shared setup block at each level. It encourages the use of shared state, allows accidental use of shared state, makes setup difficult to follow, makes tailoring setup for individual tests difficult, and makes it hard to modify tests and add new ones.
 
 **Abstract common setup logic into utility functions.** This avoids pretty much all the issues that arise from using hooks. Extract shared setup logic into utility functions, and use them directly and as-needed from individual tests. The functions return objects ready for use in the test, and often accept parameters (data, or options) to allow tailoring the setup for individual tests. The latter makes it easy to see the difference in setup between each test.
 
