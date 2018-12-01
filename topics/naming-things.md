@@ -22,7 +22,7 @@
 
 **Avoid overusing "get" as a method name prefix.** Getters return values. Prefer more informative alternatives such as "request", "fetch", "find", "query", "build", or "create" where appropriate.
 
-**Consider renaming existing items when adding a new one causes ambiguity/conflict.** This often yields greater clarity than only qualifying the new one to distinguish it.
+**Consider qualifying every name when it becomes necessary to qualify one.** This often yields greater clarity/distinctiveness than only qualifying one to distinguish it, and makes it more likely that the correct one will be chosen for use in the appropriate places. *Example: previousFoo & nextFoo, instead of previousFoo & foo.*
 
 **Consider naming related things so they appear together in alphabetical order.** This aids discoverability when using an alphabetical ordering convention. *Example: data, dataError, dataLoaded.*
 
