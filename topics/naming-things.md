@@ -20,7 +20,7 @@
 
 **Use positive names for Booleans, and avoid negation within the name.** Negative names cause double negatives, which make expressions harder to grasp (consider `enabled: true` vs. `disabled: false`). Using the word "not" has the same issue.
 
-**Avoid overusing "get" as a method name prefix.** Getters return values. Prefer more informative alternatives such as "request", "fetch", "find", or "query" where appropriate.
+**Avoid overusing "get" as a method name prefix.** Getters return values. Prefer more informative alternatives such as "request", "fetch", "find", "query", "build", or "create" where appropriate.
 
 **Consider renaming existing items when adding a new one causes ambiguity/conflict.** This often yields greater clarity than only qualifying the new one to distinguish it.
 
