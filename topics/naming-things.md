@@ -18,7 +18,7 @@
 
 **Avoid unnecessarily long names.** Aim not to be any longer than required to convey meaning. Long names increase the need for statements and method calls to span multiple lines, which makes code less readable. This rule implies avoiding use of a type's full name as a variable/parameter name where not necessary.
 
-**Avoid over qualifying names.** When context for a name has already been established, for example by being within a class or method, it's not necessary to re-state that context. A *task*, for example, doesn't need a *taskCompleted*.
+**Avoid over qualifying names.** When context for a name has already been established, for example by being within a class or method, it's not necessary to re-state that context. A *task*, for example, doesn't need a `taskCompleted`.
 
 **Use positive names for Booleans, and avoid negation within the name.** Negative names cause double negatives, which make expressions harder to grasp (consider `enabled: true` vs. `disabled: false`). Using the word "not" has the same issue.
 
@@ -26,9 +26,9 @@
 
 **Strive for distinctive names within the same context.** Similar names are easy to mix up, and make code difficult to read.
 
-**Consider qualifying every name when it becomes necessary to qualify one.** This often yields greater clarity/distinctiveness than only qualifying one to distinguish it, and makes it more likely that the correct one will be chosen for use in the appropriate places. *Example: previousFoo & nextFoo, instead of previousFoo & foo.*
+**Consider qualifying every name when it becomes necessary to qualify one.** This often yields greater clarity/distinctiveness than only qualifying one to distinguish it, and makes it more likely that the correct one will be chosen for use in the appropriate places. *Example: `previousFoo` & `nextFoo`, instead of `previousFoo` & `foo`.*
 
-**Consider naming related things so they appear together in alphabetical order.** This aids discoverability when using an alphabetical ordering convention. *Example: data, dataError, dataLoaded.*
+**Consider naming related things so they appear together in alphabetical order.** This aids discoverability when using an alphabetical ordering convention. *Example: `data`, `dataError`, `dataLoaded`.*
 
 **Methods should always do what their names promise.** Method names convey expectations, and callers will be surprised if they aren't met. Avoid conditionally not doing what the name promises, and [throw an exception if unable to do what the name promises](https://www.hanselman.com/blog/IfYourMethodCantDoWhatItsNamePromisesItCanThrow.aspx).
 

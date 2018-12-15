@@ -1,0 +1,76 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+
+antipatterns
+DAOs
+linter
+ok
+plugin
+
+ - LICENSE.md
+Attribution-NonCommercial-NoDerivatives
+Robat
+
+ - README.md
+Checkstyle
+ESLint
+plugins
+
+ - topics/code-flow.md
+callees
+
+ - topics/code-structure.md
+config
+lifecycle
+serializer
+
+ - topics/comments.md
+buildup
+gotchas
+TODOs
+
+ - topics/commits.md
+refactorings
+
+ - topics/error-handling.md
+catch-wrap-rethrow
+
+ - topics/formatting.md
+EditorConfig
+whitespace
+
+ - topics/functional.md
+startup
+
+ - topics/java.md
+BigDecimal
+un
+
+ - topics/naming-things.md
+Booleans
+camelCasing
+color
+Karlton
+
+ - topics/pull-request.md
+pr
+PRs
+SLA-type
+stylesheets
+
+ - topics/tech-javascript.md
+async
+date-fns
+falsy
+Luxon
+Moment.js
+polyfilled
+reflow
+truthy
+ununderstood
+
+ - topics/ui-text.md
+enum

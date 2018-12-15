@@ -1,6 +1,6 @@
 # Formatting
 
-*Almost all formatting issues should be automated through tools such as ESLint or Checkstyle. Violations should fail the build, lest they accummulate and make new ones hard to notice.*
+*Almost all formatting issues should be automated through tools such as ESLint or Checkstyle. Violations should fail the build, lest they accumulate and make new ones hard to notice.*
 
 *Local development (file-watch) builds need not fail on violations, lest it become an annoying inconvenience. Editor/IDE settings matching the requirements should be checked in and shared, for example using [EditorConfig](https://editorconfig.org/) files. Also consider running the automated checks using a source control pre-commit hook.*
 
@@ -14,7 +14,7 @@
 
 **Avoid leaving trailing whitespace.** They're a source of "false differences", and there's no good reason to have them.
 
-**End files with a linebreak.** This avoids the existing final line being considered as modified in a diff when you add a new line after it later.
+**End files with a line break.** This avoids the existing final line being considered as modified in a diff when you add a new line after it later.
 
 **Use single blank lines judiciously to separate constructs and groups of statements.** Blank lines create visual separation between logical parts, making code easier to read. Dense code is harder to read. Examples include after a group of variable declarations, around an if-else statement, around logical parts of a method, and before a return statement.
 
