@@ -46,7 +46,7 @@
 
 ## Reviewing and giving feedback
 
-**Review the entire change.** Everything in the codebase contributes directly or indirectly to the features and quality of the application. Avoid considering certain areas less worthy of review, and skipping them - for example tests, tooling, or stylesheets.
+**Review the entire change.** Everything in the codebase contributes directly or indirectly to the features and quality of the application. Avoid considering certain areas less worthy of review, and skipping them - for example tests, build configuration, or stylesheets.
 
 **Run the code.** Just because it looks ok, doesn't mean that it does the right thing. If the project tooling makes it difficult for people to switch between their own work and running review branches, fix that.
 
