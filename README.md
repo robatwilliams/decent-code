@@ -56,6 +56,6 @@ This isn't a style guide, a declaration of The Right Way, a comprehensive guide 
 ## Further reading
 The following books on generally writing good code are popular and highly-rated.
 
+* [97 Things Every Programmer Should Know](https://www.goodreads.com/book/show/7003902-97-things-every-programmer-should-know) *(free to [read online](https://github.com/97-things/97-things-every-programmer-should-know)*)
 * [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code)
 * [Code Complete](https://www.goodreads.com/book/show/4845.Code_Complete)
-* [97 Things Every Programmer Should Know](https://www.goodreads.com/book/show/7003902-97-things-every-programmer-should-know) *(free to [read online](https://github.com/97-things/97-things-every-programmer-should-know)*)
