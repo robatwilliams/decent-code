@@ -31,7 +31,7 @@ This isn't a style guide, a declaration of The Right Way, a comprehensive guide 
 1. [Naming things](topics/naming-things.md)
 1. [Code flow](topics/code-flow.md)
 1. [Code structure](topics/code-structure.md)
-1. [Code fashion](topics/code-fashion.md)
+1. [General programming](topics/general-programming.md)
 1. [Functional](topics/functional.md)
 1. [Error handling](topics/error-handling.md)
 1. Logging 🚧

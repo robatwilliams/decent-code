@@ -1,8 +1,5 @@
-# Code fashion
+# General programming
 
-*"Fashion" here refers to non-stylistic approaches/techniques, and is chosen to distinguish it from [formatting](formatting.md).*
-
-----
 
 ## General
 
