@@ -25,7 +25,7 @@
 
 ## Structure and isolation
 
-**Avoid shared state between tests.** Shared state breaks test isolation, usually leading to a mess involving false passes or false failures depending on which tests are run together and in which order. Examples include shared variables (usually to avoid redeclaration), re-used test instances, and re-used mocks. Always start afresh.
+**Avoid shared state between tests.** Shared state breaks test isolation, usually leading to a mess involving false passes or false failures depending on which tests are run together and in which order. Examples include shared variables (usually to avoid redeclaration), re-used test instances, and re-used mocks. Always start afresh, or in the case of mocks, reset them.
 
 **Avoid shared setup logic in hooks.** This means block(s) of code that the test framework runs before a collection of individual tests. Taken to extreme, it involves nested groups of tests, with a shared setup block at each level. It encourages the use of shared state, allows accidental use of shared state, makes setup difficult to follow, makes tailoring setup for individual tests difficult, and makes it hard to modify tests and add new ones.
 
