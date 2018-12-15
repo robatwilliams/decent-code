@@ -6,6 +6,7 @@
 
 antipatterns
 DAOs
+enum
 linter
 ok
 plugin
@@ -71,6 +72,3 @@ polyfilled
 reflow
 truthy
 ununderstood
-
- - topics/ui-text.md
-enum
