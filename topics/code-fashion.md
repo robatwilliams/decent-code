@@ -4,6 +4,17 @@
 
 ----
 
+## General
+
+**Prefer a functional approach to an imperative one.** Less mutable state and side-effects make code less error-prone, and easier to reason about.
+
+**Minimise held state.** State of any form (variables, caches) tends to be a source of complexity and problems, so it's best to keep as little of it around as necessary. Prefer to derive information when needed to storing it, if constraints allow.
+
+**Help compilers/transpilers and static analysis tools to help you.** These tools can detect problems in code before it's even run, giving a shorter feedback loop. Be aware of the problems your tools can detect, and write code to help them. For example, use annotations such as `@Override`, use constant variables, avoid unnecessarily initialising variables, avoid unsafe operations, and avoid suppressing warnings.
+
+**Think carefully before suppressing a static analysis warning or disabling entirely the rule that caused it.** Consider why the rule was enabled and configured thus in the first place. Rule documentation pages usually describe the motivation for the rule. You may be going against best practice (or project practice), or using an error-prone or deprecated technique. *Further reading: [Chesterton's fence](https://en.wikipedia.org/wiki/Wikipedia:Chesterton%27s_fence)*
+
+
 ## Objects and classes
 
 **Favour immutability.** Immutable objects are generally simpler and less error-prone to use than mutable ones. This is especially true in a multi-threaded context.
