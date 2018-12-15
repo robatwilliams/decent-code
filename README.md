@@ -3,6 +3,8 @@
 
 A guide/checklist to help people level-up their coding and code-reviewing. It's about 25 pages of A4 size 11 text.
 
+[Jump to Contents](#contents)
+
 
 ## Motivation
 It can be hard to maintain consistency and quality while scaling code review.
