@@ -4,9 +4,11 @@
 >
 > &mdash; <cite>Phil Karlton<cite>
 
-**One name for each thing, and each name used for only one thing.** Using multiple words to mean the same thing, or the same word to mean different things, wastes cognitive effort and is likely to cause confusion. This not only applies to code, but to everything in the context of our work, for example: variable and class names, data, domain concepts, repositories, configuration, and permissions.
+**One name for each thing, and each name used for only one thing.** Using multiple words to mean the same thing, or the same word to mean different things, wastes cognitive effort and is likely to cause confusion. This not only applies to code, but to everything in the context of our work, for example: variable and class names, method names, data, domain concepts, repositories, configuration, and permissions.
 
 **Use well-known names from the world, business and technical domains.** Doing so maintains a common vocabulary which makes communication more efficient. Avoid overloading such names with different meanings.
+
+**Use names which convey meaning.** Meaning is key to being able to understand code. Generic names such as "data" or "value" are less informative.
 
 **Avoid letting poor/inconsistent names from other contexts creep in to the code.** Such contexts include legacy code, libraries, and other applications we interact with. Establish a boundary within which these naming guidelines are adhered to, and defend it from outside pollution.
 
@@ -21,6 +23,8 @@
 **Use positive names for Booleans, and avoid negation within the name.** Negative names cause double negatives, which make expressions harder to grasp (consider `enabled: true` vs. `disabled: false`). Using the word "not" has the same issue.
 
 **Avoid overusing "get" as a method name prefix.** Getters return values. Prefer more informative alternatives such as "request", "fetch", "find", "query", "build", or "create" where appropriate.
+
+**Strive for distinctive names within the same context.** Similar names are easy to mix up, and make code difficult to read.
 
 **Consider qualifying every name when it becomes necessary to qualify one.** This often yields greater clarity/distinctiveness than only qualifying one to distinguish it, and makes it more likely that the correct one will be chosen for use in the appropriate places. *Example: previousFoo & nextFoo, instead of previousFoo & foo.*
 
