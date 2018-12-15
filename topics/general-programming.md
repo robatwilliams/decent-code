@@ -1,6 +1,17 @@
 # General programming
 
 
+## Writing, reading, and working with code
+
+**Code should be easy to follow.** After writing a piece of code (and tests for it, if appropriate), consider if it could be refactored to make it clearer. Clear code consumes less mental energy to understand, leaving more spare for better uses.
+
+**Code should be easy to use right, and hard to use wrong.** It should guide people down the right path naturally. It should get in the way and make things difficult when someone tries to use it wrongly.
+
+**Code should be easy to change right, and hard to change wrong.** It should help people decide what to change, and where to do it. It should resist when someone tries to change it wrongly (break it), and cause test failures.
+
+**Minimise the odd, the unusual, and cleverness.** Prefer simplicity and clarity. Write boring code, and write it to help others (and your future self) rather than attempt to impress them.
+
+
 ## General
 
 **Prefer a functional approach to an imperative one.** Less mutable state and side-effects make code less error-prone, and easier to reason about.
