@@ -15,6 +15,15 @@
 **Avoid multi-purpose data classes.** These are typically data or DTO (data transfer object) classes, partially populated in different ways and used for different purposes, when multiple things that need representing are quite similar apart from a few fields. They obscure what the actual domain items look like, are error-prone, and are difficult to refactor away.
 
 
+## Data and values
+
+**Create and use data types that model the domain.** Avoid using strings for everything just because it's possible and appears to be convenient. Domain-based data types are key to object oriented programming, provide natural homes for many methods, and provide the compiler with information it can use to detect erroneous usage.
+
+**Include units of measurement/magnitude in domain data types.** This empowers the domain model together with the compiler to guard against invalid calculations. This is akin to the use of dimensional analysis of a derived physics equation's input and output units in order to verify that it was derived correctly. It also removes the need for including the unit (e.g. MWh) in property/variable names.
+
+**Extract constants for magic numbers, generally.** There are some cases where doing so adds noise, such as for zero.
+
+
 ## Methods
 
 **Avoid doing things the caller wouldn't reasonably expect.** The method name conveys expectations - avoid surprising side-effects.
