@@ -8,9 +8,9 @@
 
 **Prefer a functional approach to an imperative one.** Less mutable state and side-effects make code less error-prone, and easier to reason about.
 
-**Minimise held state.** State of any form (variables, caches) tends to be a source of complexity and problems, so it's best to keep as little of it around as necessary. Prefer to derive information when needed to storing it, if constraints allow.
+**Minimise held state.** State of any form (e.g. variables, caches) tends to be a source of complexity and problems, so it's best to keep as little of it around as necessary. Prefer to derive information when needed, to storing it, if constraints allow.
 
-**Help compilers/transpilers and static analysis tools to help you.** These tools can detect problems in code before it's even run, giving a shorter feedback loop. Be aware of the problems your tools can detect, and write code to help them. For example, use annotations such as `@Override`, use constant variables, avoid unnecessarily initialising variables, avoid unsafe operations, and avoid suppressing warnings.
+**Help compilers/transpilers and static analysis tools to help you.** These tools can detect problems in code before it's even run, giving a shorter feedback loop. Be aware of the problems your tools can detect, and write code to help them. For example, use annotations such as `@Override`, use constant variables, avoid unnecessarily initialising variables, avoid subverting the type safety system, and avoid suppressing warnings.
 
 **Think carefully before suppressing a static analysis warning or disabling entirely the rule that caused it.** Consider why the rule was enabled and configured thus in the first place. Rule documentation pages usually describe the motivation for the rule. You may be going against best practice (or project practice), or using an error-prone or deprecated technique. *Further reading: [Chesterton's fence](https://en.wikipedia.org/wiki/Wikipedia:Chesterton%27s_fence)*
 
@@ -32,7 +32,7 @@
 
 **Include units of measurement/magnitude in domain data types.** This empowers the domain model together with the compiler to guard against invalid calculations. This is akin to the use of dimensional analysis of a derived physics equation's input and output units in order to verify that it was derived correctly. It also removes the need for including the unit (e.g. MWh) in property/variable names.
 
-**Extract constants for magic numbers, generally.** There are some cases where doing so adds noise, such as for zero.
+**Extract constants for magic numbers, generally.** There are however some cases where doing so adds noise, such as for zero.
 
 
 ## Methods
@@ -47,11 +47,11 @@
 
 **Order parameters consistently.** Where there are overloads, or many methods taking similar parameters, all the methods should take the common parameters first.
 
-**Avoid Boolean parameters.** When reading calling code, Boolean parameters make it difficult to know the intent of calls. Consider a two-element enum, a parameters object, or a separate method for each case. Read more: [The Pitfalls of Boolean Trap](https://ariya.io/2011/08/hall-of-api-shame-boolean-trap).
+**Avoid Boolean parameters.** When reading calling code, Boolean parameters make it difficult to know the intent of calls. Consider a two-element enum, a parameters object, or a separate method for each case. *Further reading: [The Pitfalls of Boolean Trap](https://ariya.io/2011/08/hall-of-api-shame-boolean-trap)*
 
 
 ## Logic
 
-**Base logic on identifiers, not names.** Names are generally not guaranteed to be unique, and are prone to change. Identify things using their identifiers to drive logic.
+**Base logic on identifiers, not names.** Names are not generally guaranteed to be unique, and are prone to change. Identify things using their identifiers to drive logic.
 
 **Avoid reversing conditionals through negating the expression.** Handling the `false` case in the else block makes the construct easier to follow, especially when there are multiple `else if` cases.
