@@ -2,7 +2,7 @@
 
 **Avoid pointless comments which don't add any value.** If something is clear from reading the code, a comment only adds noise.
 
-**Consider whether the code could be improved such that the comment would no longer be necessary.** Comments which explain what the code is doing, and sometimes why, can often be rendered unnecessary through improving naming, refactoring, or introducing explanatory variables.
+**Consider whether the code could be improved such that the comment would no longer be necessary.** Comments which explain what the code is doing, and sometimes why, can often be rendered unnecessary through improving naming, refactoring (e.g. extracting a function), or introducing explanatory variables.
 
 **Consider whether a unit test would be better communication.** Well-constructed and named unit tests can explain the reasoning behind the code, as well as demonstrating and verifying its behaviour in different cases.
 
