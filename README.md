@@ -40,7 +40,7 @@ This isn't a style guide, a declaration of The Right Way, a comprehensive guide 
 1. [Formatting](topics/formatting.md)
 1. [Dependencies](topics/dependencies.md)
 1. Tech specifics
-   1. CSS 🚧
+   1. [CSS](topics/tech-css.md)
    1. [HTML](topics/tech-html.md)
    1. [Java](topics/java.md)
    1. [JavaScript](topics/tech-javascript.md)
