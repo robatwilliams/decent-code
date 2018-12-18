@@ -65,6 +65,10 @@ PRs
 SLA-type
 stylesheets
 
+ - topics/tech-css.md
+flexbox
+linters
+
  - topics/tech-javascript.md
 async
 date-fns
