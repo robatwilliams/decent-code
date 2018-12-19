@@ -38,3 +38,12 @@
 **Avoid using outdated techniques.** Advancements in CSS capabilities continue to bring about newer and better alternatives to many legacy techniques, and there is widespread support for them in browsers. Use them. With the advent of flexbox in particular, many hacks and workarounds are no longer necessary.
 
 **Beware feature support in different browsers.** Either only use those supported by all browsers your application supports, or do progressive enhancement. Refer to the  [Can I use](https://caniuse.com/) reference, and browser compatibility tables on [MDN documentation pages](https://developer.mozilla.org/en-US/docs/Web/CSS/flex#Browser_compatibility). Use a [linter](https://github.com/anandthakker/doiuse) to automate compatibility checks.
+
+
+## Isolation
+
+**Namespace selectors to avoid unintentionally affecting unwanted elements.** Class names and selectors are defined and operate in a global space (the page), so a strategy is necessary to consistently and easily avoid rules that affect unwanted elements. Examples include using a component's root class as a prefix all its style rules' selectors, BEM, and CSS Modules. Even with such a strategy, particular care is required to avoid parent components unintentionally affecting other components nested within them.
+
+**Avoid "reaching in" to subcomponents to add/override their styling.** Such styles are coupled to the child component's internal implementation (DOM and own styles), and are unlikely to be taken into consideration if that changes - making them fragile and hard to maintain. This is akin to using/modifying private object state in OO programming. Instead, have the subcomponent support "option/mode classes" on its root - that parent components can opt-in to using.
+
+**Make components unopinionated about where/how they're used.** Styles affecting the outsides of a component's elements, such as positioning/layout/spacing, should be left to be specified by the parent code that's using the component.
