@@ -25,7 +25,7 @@
 
 **Avoid defaulting collections to be empty while data is loading.** Doing so removes/hides the distinction between loading states and no-data states, often leading to inappropriate/missing handling.
 
-*Further reading on defaults: my article on [Default values in code and configuration](https://medium.com/@robatwilliams/default-values-in-code-and-configuration-b9da376c58ae)*
+*Further reading on defaults: my article on [Default values in code and configuration](https://blog.scottlogic.com/2018/11/22/default-values-in-code-and-configuration.html)*
 
 
 ## Checks
