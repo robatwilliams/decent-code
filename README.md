@@ -34,7 +34,7 @@ This isn't a style guide, a declaration of The Right Way, a comprehensive guide 
 1. [General programming](topics/general-programming.md)
 1. [Functional](topics/functional.md)
 1. [Error handling](topics/error-handling.md)
-1. Logging 🚧
+1. [Logging](topics/logging.md)
 1. [Tests](topics/tests.md)
 1. [Files](topics/files.md)
 1. [Formatting](topics/formatting.md)
