@@ -55,7 +55,7 @@
 
 **Order parameters consistently.** Where there are overloads, or many methods taking similar parameters, all the methods should take the common parameters first.
 
-**Avoid Boolean parameters.** When reading calling code, Boolean parameters make it difficult to know the intent of calls. Consider a two-element enum, a parameters object, or a separate method for each case. *Further reading: [The Pitfalls of Boolean Trap](https://ariya.io/2011/08/hall-of-api-shame-boolean-trap)*
+**Avoid Boolean parameters.** When reading calling code, Boolean parameters make it difficult to know the intent of calls. Consider a two-element enum, a parameters object, or a separate method for each case. *Further reading: [The Pitfalls of Boolean Trap](https://ariya.io/2011/08/hall-of-api-shame-boolean-trap), by Ariya Hidayat*
 
 
 ## Logic
