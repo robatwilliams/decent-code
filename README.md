@@ -42,7 +42,7 @@ This isn't a style guide, a declaration of The Right Way, a comprehensive guide 
 1. Tech specifics
    1. [CSS](topics/tech-css.md)
    1. [HTML](topics/tech-html.md)
-   1. [Java](topics/java.md)
+   1. [Java](topics/tech-java.md)
    1. [JavaScript](topics/tech-javascript.md)
 1. [Comments](topics/comments.md)
 1. [Commits](topics/commits.md)

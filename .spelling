@@ -51,10 +51,6 @@ whitespace
  - topics/functional.md
 startup
 
- - topics/java.md
-BigDecimal
-un
-
  - topics/logging.md
 Brodwall
 Eberhardt
@@ -78,6 +74,10 @@ flexbugs
 Jarno
 linters
 Rantanen
+
+ - topics/tech-java.md
+BigDecimal
+un
 
  - topics/tech-javascript.md
 async

@@ -17,4 +17,3 @@
 **Minimise visibility.** Not everything needs to be public: prefer default visibility where private is too restrictive. While member variable visibility is often thought of and minimised, classes and their methods are often left unnecessarily public - possibly due to IDE defaults.
 
 **Use exception hierarchies.** This allows callers that care to handle a particular precise sub-exception, while allowing callers that don't to conveniently catch the one at the root of the hierarchy.
-
