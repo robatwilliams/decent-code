@@ -47,3 +47,12 @@
 **Avoid "reaching in" to subcomponents to add/override their styling.** Such styles are coupled to the child component's internal implementation (DOM and own styles), and are unlikely to be taken into consideration if that changes - making them fragile and hard to maintain. This is akin to using/modifying private object state in OO programming. Instead, have the subcomponent support "option/mode classes" on its root - that parent components can opt-in to using.
 
 **Make components unopinionated about where/how they're used.** Styles affecting the outsides of a component's elements, such as positioning/layout/spacing, should be left to be specified by the parent code that's using the component.
+
+
+## Comments
+
+**Document browser bug workarounds.** Doing so highlights and explains unusual or confusing styles, for the benefit of your future self and others. For well-known issues, this can be done concisely with a short phrase and a link to e.g. [flexbugs](https://github.com/philipwalton/flexbugs#flexbug-1).
+
+**Explain the choice of non-obvious "magic values" such as widths and spacings.** Documenting these allows future changes to be made with greater confidence, and avoid regressions. Widths chosen to fit particular longest-expected values are an example.
+
+*Also see: [Comments](comments.md)*

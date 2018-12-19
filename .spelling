@@ -67,6 +67,7 @@ stylesheets
 
  - topics/tech-css.md
 flexbox
+flexbugs
 linters
 
  - topics/tech-javascript.md
