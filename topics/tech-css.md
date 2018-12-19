@@ -18,9 +18,9 @@
 
 **One selector per line.** Multiple ones per line are detrimental to readability.
 
-**Avoid tight coupling of selectors to DOM structure.** Doing so makes both styles and DOM hard to modify without breaking the other. Beware selectors that specify many classes (mirroring the DOM), or using the `>` child combinator.
+**Avoid tight coupling of selectors to DOM structure.** Doing so makes both styles and DOM hard to modify without breaking the other. Beware selectors that specify many classes (mirroring the DOM tree), or using the `>` child combinator.
 
-**Put declarations in a thought-out order.** Rules containing declarations in a random (or by time-added) order are more difficult to read and mentally visualise. They are also prone to multiple conflicting (i.e. accidentally overridden) declarations. A thought-out ordering where the most important declarations come first, and related declarations are grouped together, avoids these problems. Use a linter to enforce the ordering. Established and popular orderings (which linters will have presets for) include [Concentric](http://rhodesmill.org/brandon/2011/concentric-css/), [RECESS](http://twitter.github.io/recess/), and [SMACSS](https://smacss.com/book/formatting#grouping).
+**Put declarations in a thought-out order.** Rules containing declarations in a random (or by time-added) order are more difficult to read and quickly visualise mentally. They are also prone to multiple conflicting (i.e. accidentally overridden) declarations. A thought-out ordering where the most important declarations come first, and related declarations are grouped together, avoids these problems. Use a linter to enforce the ordering. Established and popular orderings (which linters will have presets for) include [Concentric](http://rhodesmill.org/brandon/2011/concentric-css/), [RECESS](http://twitter.github.io/recess/), and [SMACSS](https://smacss.com/book/formatting#grouping).
 
 **Use variables for standard colours, spacings, etc.** Doing so avoids repetition, and helps ensure consistency.
 
@@ -31,7 +31,7 @@
 
 **Avoid absolute positioning where not appropriate.** Absolute positioning takes elements out of the layout flow by positioning them at particular coordinates. These require manual adjustment to fit surrounding elements together, and tend to proliferate by necessity once introduced into a layout. They are not often necessary with modern layout features.
 
-**Avoid using floats to position elements.** The purpose of floats is to allow content to flow around an element. They were however historically used in ways they weren't designed for, to achieve layouts that weren't otherwise possible in CSS. Modern layout features such are flexbox are much better alternatives, so it's rarely necessary or appropriate to use floats nowadays.
+**Avoid using floats to position elements.** The purpose of floats is to allow content to flow around an element. They were however historically used in ways they weren't designed for, to achieve layouts that weren't otherwise possible in CSS at the time. Modern layout features such are flexbox are much better alternatives, so it's rarely necessary or appropriate to use floats nowadays.
 
 **Avoid using `text-align` to align elements.** This is an inherited property, so children of an element that is aligned using it, must counteract the unwanted text alignment by setting their own `text-align`. Use flexbox to align elements instead.
 
@@ -48,11 +48,11 @@
 
 **Namespace selectors to avoid unintentionally affecting unwanted elements.** Class names and selectors are defined and operate in a global space (the page), so a strategy is necessary to consistently and easily avoid rules that affect unwanted elements. Examples include using a component's root class as a prefix all its style rules' selectors, BEM, and CSS Modules. Even with such a strategy, particular care is required to avoid parent components unintentionally affecting other components nested within them.
 
-**Avoid "reaching in" to subcomponents to add/override their styling.** Such styles are coupled to the child component's internal implementation (DOM and own styles), and are unlikely to be taken into consideration if that changes - making them fragile and hard to maintain. This is akin to using/modifying private object state in OO programming. Instead, have the subcomponent support "option/mode classes" on its root - that parent components can opt-in to using.
+**Avoid "reaching in" to subcomponents to add/override their styling.** Such styles are coupled to the child component's internal implementation (DOM and own styles), and are unlikely to be taken into consideration if that changes - making them fragile and hard to maintain. This is akin to using/modifying private state in object oriented programming. Instead, have the subcomponent support "option/mode classes" on its root, that parent components can apply to opt-in.
 
-**Make components unopinionated about where/how they're used.** Styles affecting the outsides of a component's elements, such as positioning/layout/spacing, should be left to be specified by the parent code that's using the component.
+**Make components unopinionated about where/how they're used.** Styles affecting the outsides of a component's element, such as positioning/layout/spacing, should be left to be specified by the parent code that's using the component.
 
-*For more on writing scalable CSS, I recommend this ["8 simple rules for a robust, scalable CSS architecture"](https://github.com/jareware/css-architecture) article by Jarno Rantanen.*
+*For more on writing scalable CSS, I recommend this ["8 simple rules for a robust, scalable CSS architecture"](https://github.com/jareware/css-architecture) guide by Jarno Rantanen.*
 
 
 ## Comments
