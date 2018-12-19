@@ -18,7 +18,11 @@
 
 **One selector per line.** Multiple ones per line are detrimental to readability.
 
+**Avoid tight coupling of selectors to DOM structure.** Doing so makes both styles and DOM hard to modify without breaking the other. Beware selectors that specify many classes (mirroring the DOM), or using the `>` child combinator.
+
 **Put declarations in a thought-out order.** Rules containing declarations in a random (or by time-added) order are more difficult to read and mentally visualise. They are also prone to multiple conflicting (i.e. accidentally overridden) declarations. A thought-out ordering where the most important declarations come first, and related declarations are grouped together, avoids these problems. Use a linter to enforce the ordering. Established and popular orderings (which linters will have presets for) include [Concentric](http://rhodesmill.org/brandon/2011/concentric-css/), [RECESS](http://twitter.github.io/recess/), and [SMACSS](https://smacss.com/book/formatting#grouping).
+
+**Use variables for standard colours, spacings, etc.** Doing so avoids repetition, and helps ensure consistency.
 
 
 ## Features and techniques
@@ -47,6 +51,8 @@
 **Avoid "reaching in" to subcomponents to add/override their styling.** Such styles are coupled to the child component's internal implementation (DOM and own styles), and are unlikely to be taken into consideration if that changes - making them fragile and hard to maintain. This is akin to using/modifying private object state in OO programming. Instead, have the subcomponent support "option/mode classes" on its root - that parent components can opt-in to using.
 
 **Make components unopinionated about where/how they're used.** Styles affecting the outsides of a component's elements, such as positioning/layout/spacing, should be left to be specified by the parent code that's using the component.
+
+*For more on writing scalable CSS, I recommend this ["8 simple rules for a robust, scalable CSS architecture"](https://github.com/jareware/css-architecture) article by Jarno Rantanen.*
 
 
 ## Comments
