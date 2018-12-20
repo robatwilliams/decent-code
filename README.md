@@ -108,9 +108,7 @@ The following books on generally writing good code are popular and highly-rated.
 
 **Follow existing conventions around you.** These may be in a particular method, the codebase as a whole, or the technology/platform you're working with. Strive for consistency, and avoid doing differently without good reason.
 
-----
-
-This Gist may be useful: [List of names that tend to be useful in programming](https://gist.github.com/robatwilliams/1f089398144867e629bdc343a5cc5be6)
+*This Gist may be useful: [List of names that tend to be useful in programming](https://gist.github.com/robatwilliams/1f089398144867e629bdc343a5cc5be6)*
 
 
 
@@ -383,11 +381,10 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Client errors are not application errors.** If a client sends an invalid request or otherwise does something illegal/wrong, it's that client that's in the wrong - not the application handling the request. Logging such errors as application errors generates noise when a misbehaving or poorly-implemented client calls our application.
 
 
-----
-
+### Further reading
 *Also see: [Error handling](#error-handling)*
 
-*Further reading:*
+*External resources:*
 * *[The Art of Logging](https://www.codeproject.com/Articles/42354/The-Art-of-Logging), by Colin Eberhardt*
 * *[Log Level Inflation](https://marxsoftware.blogspot.com/2010/09/log-level-inflation.html), by Dustin Marx*
 * *[Verbose Logging Will Disturb Your Sleep](https://github.com/97-things/97-things-every-programmer-should-know/blob/master/en/thing_90/README.md), by Johannes Brodwall*
@@ -475,13 +472,11 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ## Formatting
 
-*Almost all formatting issues should be automated through tools such as ESLint or Checkstyle. Violations should fail the build, lest they accumulate and make new ones hard to notice.*
+> *Almost all formatting issues should be automated through tools such as ESLint or Checkstyle. Violations should fail the build, lest they accumulate and make new ones hard to notice.*
 
-*Local development (file-watch) builds need not fail on violations, lest it become an annoying inconvenience. Editor/IDE settings matching the requirements should be checked in and shared, for example using [EditorConfig](https://editorconfig.org/) files. Also consider running the automated checks using a source control pre-commit hook.*
+> *Local development (file-watch) builds need not fail on violations, lest it become an annoying inconvenience. Editor/IDE settings matching the requirements should be checked in and shared, for example using [EditorConfig](https://editorconfig.org/) files. Also consider running the automated checks using a source control pre-commit hook.*
 
-*The following includes only the key things to get right; it's not a comprehensive set of settings for automated tools.*
-
-----
+> *The following includes only the key things to get right; it's not a comprehensive set of settings for automated tools.*
 
 **Use consistent line endings.** Source control tools consider otherwise identical lines with different ending breaks to be different. Mixing within a project will cause unnecessary diff noise (making code harder to review) and merge problems, especially when code is moved during refactoring.
 
@@ -618,11 +613,9 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ## Tech: Java
 
-*This is rather a short topic, as I worked mainly with other technologies while I gathered notes for this guide (2018).*
+> *This is rather a short topic, as I worked mainly with other technologies while I gathered notes for this guide (2018).*
 
-*I consider [Effective Java](https://www.goodreads.com/book/show/34927404-effective-java) mandatory reading for any Java developer, and also highly recommend [Java Concurrency in Practice](https://www.goodreads.com/book/show/127932.Java_Concurrency_in_Practice) and [Java 8 in Action](https://www.goodreads.com/book/show/20534354-java-8-in-action).*
-
-----
+> *I consider [Effective Java](https://www.goodreads.com/book/show/34927404-effective-java) mandatory reading for any Java developer, and also highly recommend [Java Concurrency in Practice](https://www.goodreads.com/book/show/127932.Java_Concurrency_in_Practice) and [Java 8 in Action](https://www.goodreads.com/book/show/20534354-java-8-in-action).*
 
 **Use `==` and `.equals()` as appropriate.** Use the latter when required, but not when the former is all that's needed.
 
@@ -751,11 +744,9 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 
 ## Pull request
 
-*Pull request and code review process is highly specific to individual team circumstances and preferences. The points here inevitably reflect my experiences, but many of them should be general/adaptable enough to be relevant for other teams. Do what works for your team to get the most benefit out of time spent by authors and reviewers.*
+> *Pull request and code review process is highly specific to individual team circumstances and preferences. The points here inevitably reflect my experiences, but many of them should be general/adaptable enough to be relevant for other teams. Do what works for your team to get the most benefit out of time spent by authors and reviewers.*
 
-*To read more about pull requests and code review - including culture, conduct, practices, and tools - start with [the code review awesome list](https://github.com/joho/awesome-code-review).*
-
-----
+> *To read more about pull requests and code review - including culture, conduct, practices, and tools - start with [the code review awesome list](https://github.com/joho/awesome-code-review).*
 
 
 ### General (pull request)
@@ -865,9 +856,7 @@ The implementation **does not add friction to the developer experience/workflow*
 
 ## UI text
 
-*These items apply to **all text regardless of who wrote it**; text provided by UX or business stakeholders should be reviewed and any issues resolved with the author.*
-
-----
+> *These items apply to **all text regardless of who wrote it**; text provided by UX or business stakeholders should be reviewed and any issues resolved with the author.*
 
 Be **accurate and unambiguous**.
 
