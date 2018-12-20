@@ -770,7 +770,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 
 **The build succeeds.** This includes running tests and automated code quality checks.
 
-**The branch is up to date with the target branch.** This is the only way of ensuring that the changes to be merged are compatible and integrated with the latest version of the target branch. This is done by merging the target branch into the source branch (or rebasing target on source).
+**The branch is up to date with the target branch.** This is the only way of ensuring that the changes to be merged are compatible and integrated with the latest version of the target branch. This is done by merging the target branch into the source branch (or rebasing source on target).
 
 **Self-review the code.** Read the requirements, and review your own code. This is an opportunity to spot any issues or things that were missed, and fix them immediately - increasing the likelihood of first-time approval.
 
