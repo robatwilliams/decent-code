@@ -66,7 +66,7 @@ The following books on generally writing good code are popular and highly-rated.
 
 ----------------------------------------
 
-# Naming things
+## Naming things
 
 > There are only two hard things in Computer Science: cache invalidation and naming things
 >
@@ -118,10 +118,10 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 ----------------------------------------
 
-# Code flow
+## Code flow
 
 
-## General
+### General
 
 **Avoid doing significant work in constructors.** This often limits flexibility around constructing and initialising the class, usually resulting in it being difficult to test.
 
@@ -132,14 +132,14 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Avoid running unnecessary code.** If the work is done and the return value is ready, then return. Running additional code wastes time, and obscures the intent for those reading it.
 
 
-## Methods
+### Methods
 
 **Methods should stand alone, generally.** Avoid methods which always require a "companion method" to be called first/afterwards, for example to check preconditions or retrieve a result/error.
 
 **Guard from outside against expected invalid calls.** In expected cases where it doesn't make sense to call the method, avoid calling it - instead of implementing it to handle invalid/meaningless cases. For example, an input form validator for number of decimal places would not expect to be called with anything other than a number.
 
 
-## Defaults
+### Defaults
 
 **Avoid inappropriate defaulting.** Opportunities for using defaults include local/member variables, method arguments, and configuration values. Before creating a default, consider whether it's helpful, and weigh it against its potential to hide mistakes or be used accidentally and unknowingly.
 
@@ -148,14 +148,14 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 *Further reading on defaults: my article on [Default values in code and configuration](https://blog.scottlogic.com/2018/11/22/default-values-in-code-and-configuration.html)*
 
 
-## Checks
+### Checks
 
 **Avoid unnecessary null checks.** There are some things in the technical and business logic domains that we can fairly confidently rely on not to ever be null. Adding explicit checks for them can hide problems, and they bloat the code.
 
 **Avoid inappropriate null/state checks (or those in inappropriate locations) that patch over underlying issues.** These are usually checks that skip/branch logic in invalid or edge-case scenarios, done in one place to avoid/conceal a problem that has originated elsewhere. Instead, prefer to address/fix the root cause issue. Also be aware of checks in callers that should be in callees, and vice versa.
 
 
-## Handling unhappy path situations
+### Handling unhappy path situations
 
 **Fail early and loud, rather than later/quietly.** Detect problems at the earliest opportunity, and make them visible, for example by throwing an error. Avoid detecting and then hiding problems silently by skipping some code or using a default value. Examples include initialisation checks, validity checks, method preconditions, and API response status checks. See [Functional](#functional) > fail fast.
 
@@ -167,10 +167,10 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 ----------------------------------------
 
-# Code structure
+## Code structure
 
 
-## General readability and maintainability
+### General readability and maintainability
 
 **Split up long/big things.** This includes files, folders, methods, and templates. Having many lines/files/parts is an indication that something is doing too many things, which makes it difficult to understand, maintain, and adapt. Look for abstractions and responsibilities where a split could be made.
 
@@ -181,7 +181,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Strive to only depend on close/related things.** Changing far-away code/behaviour shouldn't break things. Where unavoidable, document such relationships. See [comments](#comments).
 
 
-## Separation and encapsulation of responsibilities
+### Separation and encapsulation of responsibilities
 
 **Avoid mixing different types of responsibilities in the same class/method.** Each one should generally be involved in one kind of responsibility. Avoid mixing data structure manipulation with business logic, or UI behaviour logic with the DOM operations that carry it out, for example.
 
@@ -192,7 +192,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Encapsulate application-wide conventions.** Repeating even seemingly trivial conventions makes them difficult to identify, apply consistently, and modify. Conventions could be functionality-related (e.g. display of numbers/dates), or code-related (e.g. our pattern for implementing X). Some techniques can be applied in a single place (e.g. serializer configuration), while others are defined in a single place but need to be used/applied by the programmer wherever relevant (e.g. components, utility functions).
 
 
-## Ordering
+### Ordering
 
 **Think about the order of things, generally.** Ordering things (e.g. methods, config files) in a well-thought-out way makes it quicker and easier to find what you're looking for. This includes determining if it exists at all. It also helps you notice related things you weren't looking for but should probably be aware of. The best order for most things isn't by the time in which they were added. Some things need individual judgement, while others are partially/completely well-defined (e.g. alphabetical, [lifecycle methods](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)).
 
@@ -208,10 +208,10 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 ----------------------------------------
 
-# General programming
+## General programming
 
 
-## Writing, reading, and working with code
+### Writing, reading, and working with code
 
 **Code should be easy to follow.** After writing a piece of code (and tests for it, if appropriate), consider if it could be refactored to make it clearer. Clear code consumes less mental energy to understand, leaving more spare for better uses.
 
@@ -222,7 +222,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Minimise the odd, the unusual, and cleverness.** Prefer simplicity and clarity. Write boring code, and write it to help others (and your future self) rather than attempt to impress them.
 
 
-## General
+### General
 
 **Prefer a functional approach to an imperative one.** Less mutable state and side-effects make code less error-prone, and easier to reason about.
 
@@ -233,7 +233,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Think carefully before suppressing a static analysis warning or disabling entirely the rule that caused it.** Consider why the rule was enabled and configured thus in the first place. Rule documentation pages usually describe the motivation for the rule. You may be going against best practice (or project practice), or using an error-prone or deprecated technique. *Further reading: [Chesterton's fence](https://en.wikipedia.org/wiki/Wikipedia:Chesterton%27s_fence)*
 
 
-## Objects and classes
+### Objects and classes
 
 **Favour immutability.** Immutable objects are generally simpler and less error-prone to use than mutable ones. This is especially true in a multi-threaded context.
 
@@ -244,7 +244,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Avoid multi-purpose data classes.** These are typically data or DTO (data transfer object) classes, partially populated in different ways and used for different purposes, when multiple things that need representing are quite similar apart from a few fields. They obscure what the actual domain items look like, are error-prone, and are difficult to refactor away.
 
 
-## Data and values
+### Data and values
 
 **Create and use data types that model the domain.** Avoid using strings for everything just because it's possible and appears to be convenient. Domain-based data types are key to object oriented programming, provide natural homes for many methods, and provide the compiler with information it can use to detect erroneous usage.
 
@@ -253,7 +253,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Extract constants for magic numbers, generally.** There are however some cases where doing so adds noise, such as for zero.
 
 
-## Methods
+### Methods
 
 **Avoid doing things the caller wouldn't reasonably expect.** The method name conveys expectations - avoid surprising side-effects.
 
@@ -268,7 +268,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Avoid Boolean parameters.** When reading calling code, Boolean parameters make it difficult to know the intent of calls. Consider a two-element enum, a parameters object, or a separate method for each case. *Further reading: [The Pitfalls of Boolean Trap](https://ariya.io/2011/08/hall-of-api-shame-boolean-trap), by Ariya Hidayat*
 
 
-## Logic
+### Logic
 
 **Base logic on identifiers, not names.** Names are not generally guaranteed to be unique, and are prone to change. Identify things using their identifiers to drive logic.
 
@@ -280,7 +280,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 ----------------------------------------
 
-# Functional
+## Functional
 
 **The feature works in all supported browsers.** This includes aspects off the main usage path for the feature. Internet Explorer in particular needs watching out for. See [Tech: JavaScript](#tech-javascript) > feature support.
 
@@ -302,24 +302,24 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 ----------------------------------------
 
-# Error handling
+## Error handling
 
 
-## General
+### General
 
 **Throw exceptions in the domain of the method's interface.** This avoids breaching abstractions or application layers. For example, DAOs shouldn't throw HTTP exceptions, and neither should they propagate JDBC exceptions. Exceptions can be caught and wrapped in more appropriate ones to facilitate this.
 
 **Either log exceptions, or throw them - not both, generally.** Thrown exceptions will be caught at some level; if the lower level thrower can't handle the exception then it's likely not best placed to decide that it should be logged, and to do so informatively with context. Widespread log-and-throw also leads to duplicate logging as an exception bubbles up the call hierarchy. An exception to the rule is when that higher level is outside our control (e.g. a framework) - and doesn't log, logs at an undesirable level, or doesn't include sufficient detail.
 
 
-## Control flow
+### Control flow
 
 **Throw an exception from a method that can't do what its name promises.** The name [conveys expectations](https://www.hanselman.com/blog/IfYourMethodCantDoWhatItsNamePromisesItCanThrow.aspx), and the caller needs to be informed if they cannot be met.
 
 **Avoid logging errors and continuing execution regardless.** Such practice is not meaningful error handling, and is likely to cause follow-on errors and damage. Execution in the current context should stop, or take some alternate recovery path.
 
 
-## Information management and capture
+### Information management and capture
 
 **Include relevant and contextual information in exception/log messages.** Such information aids diagnosis of problems. Examples include problematic values, state, and identifiers. For custom exceptions, some of this information can be made mandatory in the constructor as opposed to the common practice of accepting a single string message.
 
@@ -328,14 +328,14 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Log caught exceptions in full, generally.** Logging only a generic message, or only the caught exception's message, discards potentially useful information - the messages of wrapped cause-exceptions, and the stack trace. At a system boundary (e.g. when exposing an API), it's usually desirable to omit (or log at a lower level) the detail of client errors (e.g. request validation) to avoid excessive log noise.
 
 
-## Web APIs
+### Web APIs
 
 **Respond with an appropriate error response code, and an informative body including further detail.** This allows clients to quickly identify the nature of the problem without needing to consult service logs. For example, a response may indicate a bad request together with an explanation of what was wrong with it.
 
 **Avoid revealing (or making inferable) sensitive information or implementation details in error responses.** Sensitive information is anything the client shouldn't know about (even it it isn't shown in the UI they're using), such as the existence of data they don't have access to, or restrictions/limits that are in place on their account. Revealing implementation details could aid attackers, either of the application or others in the organisation. Many web frameworks have features and/or encouraged patterns for handling this issue centrally and consistently.
 
 
-## User interface
+### User interface
 
 **Show appropriate and helpful information to the user.** The main body should communicate in non-technical terms what the problem is, the current state of what the user was doing, and a path to rectifying the problem. Technical detail may be included in a revealable area for inclusion on bug reports.
 
@@ -349,10 +349,10 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 ----------------------------------------
 
-# Logging
+## Logging
 
 
-## General
+### General
 
 **Bear in mind the purpose of logging.** The main ones are: determining if the application is running smoothly, and diagnosing what the problem is if it isn't running smoothly. Having these in mind helps when deciding if we should log, and if so, what information should be included. There should be some "tickover" `INFO` logging while the application is in use, to indicate that everything's fine. When things aren't fine, there should be `WARN` and `ERROR` logging to call attention to that, and detail what the problem is.
 
@@ -365,7 +365,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Avoid tightly coupled logging collaboration and dependencies.** Log messages should mostly be able to stand alone. They should remain meaningful if other distant log calls are modified or removed; that is, the complete log output should not be fragile. Avoid referring to, setting expectations of, building multi-message "sentences" in collaboration with, or relying on distant logging to "close off business you started".
 
 
-## Content
+### Content
 
 Write **clear, concise, and unambiguous messages.** Messages which follow these principles are quicker and easier to understand, and help avoid misinterpretation or confusion.
 
@@ -376,7 +376,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Use mapped diagnostic context (MDC) to distinguish logging from multiple threads.** It's almost impossible to gain an understanding of what's going on when logging output from multiple concurrent thread is interleaved. Including context information such as user/request IDs in individual log statements is tedious and repetitive. Instead, configure your logger's pattern to include such information on every line along with the timestamp.
 
 
-## Levels
+### Levels
 
 **Use levels appropriately and consistently.** Establish (or obtain) guidelines, and follow them. When the application is running smoothly for example, it shouldn't be spewing a deluge of errors and warnings.
 
@@ -398,10 +398,10 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Tests
+## Tests
 
 
-## General
+### General
 
 **Tests are code, too.** The items from the other topics in this guide apply. They require code review, and are subject to the same automated and manual quality checks and rules as the main code. Poor test code is less reliable, and can make it difficult to change or refactor the main code.
 
@@ -410,7 +410,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Single focus and purpose per test.** Tests with wide scope are less clear, and make it harder to identify the cause of failures. Aim for failures only related to the case described in the test name, and make assertions as required.
 
 
-## What to test
+### What to test
 
 **Balance value against cost.** Tests require effort to write and maintain. Consider for a given piece of code (however small) if the confidence you gain in its correctness and avoidance of future breakages is worth it against how time consuming and difficult it is to test. This item is not an excuse for antipatterns that make code difficult to test.
 
@@ -423,7 +423,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Include tests for edge cases and unhappy paths.** We need to be confident that our code works in all cases, not just the "normal" ones which may occur the vast majority of the time. Examples include errors, timeouts, invalid data, no data, and boundary values.
 
 
-## Structure and isolation
+### Structure and isolation
 
 **Avoid shared state between tests.** Shared state breaks test isolation, usually leading to a mess involving false passes or false failures depending on which tests are run together and in which order. Examples include shared variables (usually to avoid redeclaration), re-used test instances, and re-used mocks. Always start afresh, or in the case of mocks, reset them.
 
@@ -434,7 +434,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Avoid relying on the current system time and time zone.** Such tests don't test the same thing every time they're run, and are likely to cause issues in the future or when run by people or CI servers in different locations. Inject the current time into your code instead, allowing specific fixed times to be injected in tests.
 
 
-## Assertions
+### Assertions
 
 **Use strict assertions.** These strengthen the test and make it more likely to detect future regressions. Examples include strict equality, and errors/exceptions of specific types with specific messages.
 
@@ -443,7 +443,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Ensure that assertions in asynchronous code are actually run.** Use test framework specific techniques to ensure they are run. Some frameworks provide synchronous [assertions](https://jestjs.io/docs/en/expect#expectassertionsnumber) that assert that later assertions are in fact made.
 
 
-## Other
+### Other
 
 **Mock immediate dependencies rather than transitive ones.** This keeps the test independent and focused on the single unit.
 
@@ -457,7 +457,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Files
+## Files
 
 **Named well and as per conventions.** Refer to [naming things](#naming-things). Follow project conventions (e.g. suffixes) and casing style.
 
@@ -473,7 +473,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Formatting
+## Formatting
 
 *Almost all formatting issues should be automated through tools such as ESLint or Checkstyle. Violations should fail the build, lest they accumulate and make new ones hard to notice.*
 
@@ -505,7 +505,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Dependencies
+## Dependencies
 
 **Consider if there's a real need to use a library/tool.** If the task at hand can be done with a few lines of straightforward code, it may not be worth adding a new dependency. Be familiar with the latest platform/SDK and already-present libraries - what you need may already be available.
 
@@ -529,10 +529,10 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Tech: CSS
+## Tech: CSS
 
 
-## General
+### General
 
 **CSS is code, too.** The items from the other topics in this guide apply. It requires code review, and is subject to automated and manual quality checks and rules - just like any other application code. Poor CSS is difficult to modify and extend, and can make it difficult to change or refactor the application.
 
@@ -541,7 +541,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Resolve design inconsistencies.** UI designs are sometimes inconsistent in their styling, for example spacings or colours. Avoid carrying these over to the application's style code; not only do inconsistencies detract from the product, but they also tend to drive poor CSS. Some inconsistencies are trivial, while others need discussion with designers.
 
 
-## Rules
+### Rules
 
 **Use semantic class names.** Describe the purpose of the rule (e.g. `product`), not the content of the rule (e.g. `redBackground`). There are however a small number of exceptions where presentational/utility classes can be useful.
 
@@ -556,7 +556,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Use variables for standard colours, spacings, etc.** Doing so avoids repetition, and helps ensure consistency.
 
 
-## Features and techniques
+### Features and techniques
 
 **Avoid fixed dimensions where not appropriate.** Fixed dimensions unhitch elements from the browser's sizing capabilities, resulting in a layout that doesn't adapt to browser size, and one that requires manual adjustments when the content is changed. They are not often necessary with modern layout features.
 
@@ -575,7 +575,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 **Beware feature support in different browsers.** Either only use those supported by all browsers your application supports, or do progressive enhancement. Refer to the  [Can I use](https://caniuse.com/) reference, and browser compatibility tables on [MDN documentation pages](https://developer.mozilla.org/en-US/docs/Web/CSS/flex#Browser_compatibility). Use a [linter](https://github.com/anandthakker/doiuse) to automate compatibility checks.
 
 
-## Isolation
+### Isolation
 
 **Namespace selectors to avoid unintentionally affecting unwanted elements.** Class names and selectors are defined and operate in a global space (the page), so a strategy is necessary to consistently and easily avoid rules that affect unwanted elements. Examples include using a component's root class as a prefix all its style rules' selectors, BEM, and CSS Modules. Even with such a strategy, particular care is required to avoid parent components unintentionally affecting other components nested within them.
 
@@ -586,7 +586,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 *For more on writing scalable CSS, I recommend this ["8 simple rules for a robust, scalable CSS architecture"](https://github.com/jareware/css-architecture) guide by Jarno Rantanen.*
 
 
-## Comments
+### Comments
 
 **Document browser bug workarounds.** Doing so highlights and explains unusual or confusing styles, for the benefit of your future self and others. For well-known issues, this can be done concisely with a short phrase and a link to e.g. [flexbugs](https://github.com/philipwalton/flexbugs#flexbug-1).
 
@@ -600,7 +600,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Tech: HTML
+## Tech: HTML
 
 **Avoid using the `id` attribute, generally.** It's not valid to use the same id value multiple times on a page. In an application composed of multiple components, some having multiple instances, it's easy to violate that requirement. The attribute is however useful for links that scroll to specific locations on the page.
 
@@ -616,7 +616,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Tech: Java
+## Tech: Java
 
 *This is rather a short topic, as I worked mainly with other technologies while I gathered notes for this guide (2018).*
 
@@ -642,7 +642,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Tech: JavaScript
+## Tech: JavaScript
 
 **Avoid relying on the difference between `null` and `undefined`.** Doing so tends to cause fragile code. Use non-coercing equality (`==`) against `null` in equality checks for either of them. Avoid using both to signify a different kind of "no value" situation, such as "unknown field" vs. "no value for today".
 
@@ -674,7 +674,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Comments
+## Comments
 
 **Avoid pointless comments which don't add any value.** If something is clear from reading the code, a comment only adds noise.
 
@@ -704,10 +704,10 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 
 ----------------------------------------
 
-# Commits
+## Commits
 
 
-## Content
+### Content
 
 **One logical piece of work per commit.** Separate each feature, bug and refactoring from other ones. This makes for a more useful history, and also encourages an organised approach to carrying out work. If you need to fix a bug while working on a feature, consider temporarily putting away your feature changes using a source control feature such as [Git's stash](https://git-scm.com/docs/git-stash).
 
@@ -726,7 +726,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 **Avoid accidentally including unwanted files such as personal configuration and log files.** Use your source control tool's [ignore-file feature](https://git-scm.com/docs/gitignore) to prevent accidentally including such files. Check in the ignore file. Configuration that needs to be consistent across the team should however be checked in.
 
 
-## Messages
+### Messages
 
 **Summarise the change in the first ~70 characters.** This allows an at-a-glance understanding when reading the log. Many source control tools hide the rest of the message by default.
 
@@ -737,7 +737,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 *For more on why good commit messages matter, I recommend the introduction section in particular of this ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) article by Chris Beams.*
 
 
-## Committing
+### Committing
 
 **Preserve line history.** Source control tools can display a line-by-line view of the last change made to each line (often called "annotate" or "blame"). Committing changes and then making later commits to change the code back to how it was, makes this feature less useful. Editing such commits, or combining ("squashing") groups of commits where there has been significant churn, can help in such situations.
 
@@ -749,7 +749,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 
 ----------------------------------------
 
-# Pull request
+## Pull request
 
 *Pull request and code review process is highly specific to individual team circumstances and preferences. The points here inevitably reflect my experiences, but many of them should be general/adaptable enough to be relevant for other teams. Do what works for your team to get the most benefit out of time spent by authors and reviewers.*
 
@@ -758,7 +758,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 ----
 
 
-## General
+### General
 
 **Strive for small pull requests.** Large pull requests are harder to review, resulting in poorer feedback, unnoticed problems, "speed reviewing", and slow progress towards approval. If you're unable to split up work items for large features (due to process or politics), consider an incremental technique involving a series of smaller (e.g. 200-400 line) pull requests into a "collector branch" culminating in a single big pull request from that branch to the master/trunk.
 
@@ -769,7 +769,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 **Set expectations up-front.** Make it easy for contributors to submit pull requests that will be approved first time, or at least without requiring major changes. Things that help with this include clear requirements, common understanding of application architecture and programming patterns/practices, and sharing design ideas before implementation starts.
 
 
-## Before submitting
+### Before submitting
 
 **The build succeeds.** This includes running tests and automated code quality checks.
 
@@ -784,7 +784,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 **Add "insider insights/advice" for testers.** This is any useful information you feel that would help them, from your experience in implementing/fixing the requirement/bug - things that can't be known without reviewing the code changes. Add it to the issue tracker ticket. Examples include: things that were tricky to implement, seemingly unrelated areas/features that are affected (e.g. if a common component was modified), and scope of refactoring changes or technical tasks.
 
 
-## Submitting
+### Submitting
 
 **Provide an informative title.** It's helpful to be able to quickly identify a pull request among many that are open on the repository. This isn't possible when the issue tracker id alone is used as a title.
 
@@ -795,7 +795,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 **Draw attention to areas of code that require attention.** Avoid relying on reviewers picking up on things (or hoping that they don't). Having done the work, it's likely that you understand it in a deeper way than reviewers. Comment on things that don't feel quite right (new or existing), things you're unsure about (requirements or technical), or decisions of interest that you've made.
 
 
-## Reviewing and giving feedback
+### Reviewing and giving feedback
 
 **Review the entire change.** Everything in the codebase contributes directly or indirectly to the features and quality of the application. Avoid considering certain areas less worthy of review, and skipping them - for example tests, build configuration, or stylesheets.
 
@@ -810,7 +810,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 **Look for missing pieces of the jigsaw.** The current code, plus the changes under review, plus other backlog work items - will at some point make up a releasable version of the software. Point out anything you think is missing but required - a backlog work item may need to be created for it.
 
 
-## Addressing feedback
+### Addressing feedback
 
 **Address all instances that a comment applies to.** Reviewers may not have noticed all places where a comment applies, or refrained from commenting on all of them to avoid causing noise (a good practice). Consider if the point made by a comment applies in other places beyond the specific line it was made on.
 
@@ -819,7 +819,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 **Minimise repeated back-and-forth.** Some things are easier to resolve with a conversation, rather than repeated cycles of changes and comments, or long-running comment thread discussions. When you spot one of these back-and-forth/churn situations, have a conversation or suggest a short pair-programming session.
 
 
-## Before merging
+### Before merging
 
 **The build succeeds.** Configure tooling (repository and CI server) to require a successful build of the latest version of the branch before merging is allowed.
 
@@ -839,7 +839,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 
 ----------------------------------------
 
-# Features
+## Features
 
 **Ambiguities and questions have been resolved.** Document them with the requirement on the issue tracker.
 
@@ -863,7 +863,7 @@ The implementation **does not add friction to the developer experience/workflow*
 
 ----------------------------------------
 
-# UI text
+## UI text
 
 *These items apply to **all text regardless of who wrote it**; text provided by UX or business stakeholders should be reviewed and any issues resolved with the author.*
 
@@ -893,7 +893,7 @@ Use **realistic and professional mock data**. Realistic data helps detect issues
 
 ----------------------------------------
 
-# Bug fixes
+## Bug fixes
 
 **Find the cause before attempting a fix.** Any fix based on first-glance analysis without knowing or understanding the cause is unlikely to be a good/correct one.
 
@@ -917,7 +917,7 @@ Use **realistic and professional mock data**. Realistic data helps detect issues
 
 ----------------------------------------
 
-# Meta
+## Meta
 
 Is there **anything to add** to this guide?
 
