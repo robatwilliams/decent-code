@@ -61,6 +61,10 @@ The following books on generally writing good code are popular and highly-rated.
 * [Code Complete](https://www.goodreads.com/book/show/4845.Code_Complete)
 
 
+## Licence
+See [here](LICENSE.md).
+
+
 
 
 
