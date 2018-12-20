@@ -20,66 +20,66 @@ Checkstyle
 ESLint
 plugins
 
- - topics/general-programming.md
+# topics/general-programming.md
 Ariya
 Hidayat
 MWh
 
- - topics/code-flow.md
+# topics/code-flow.md
 callees
 
- - topics/code-structure.md
+# topics/code-structure.md
 config
 lifecycle
 serializer
 
- - topics/comments.md
+# topics/comments.md
 buildup
 gotchas
 TODOs
 
- - topics/commits.md
+# topics/commits.md
 refactorings
 
- - topics/error-handling.md
+# topics/error-handling.md
 catch-wrap-rethrow
 
- - topics/formatting.md
+# topics/formatting.md
 EditorConfig
 whitespace
 
- - topics/functional.md
+# topics/functional.md
 startup
 
- - topics/logging.md
+# topics/logging.md
 Brodwall
 Eberhardt
 timestamp
 
- - topics/naming-things.md
+# topics/naming-things.md
 Booleans
 camelCasing
 color
 Karlton
 
- - topics/pull-request.md
+# topics/pull-request.md
 pr
 PRs
 SLA-type
 stylesheets
 
- - topics/tech-css.md
+# topics/tech-css.md
 flexbox
 flexbugs
 Jarno
 linters
 Rantanen
 
- - topics/tech-java.md
+# topics/tech-java.md
 BigDecimal
 un
 
- - topics/tech-javascript.md
+# topics/tech-javascript.md
 async
 date-fns
 falsy
