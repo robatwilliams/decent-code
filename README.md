@@ -377,7 +377,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 **Distinguish values from message text using delimiters.** Some types of data can be hard to distinguish from the log message template itself, when they are embedded within the message. Use delimiters such as quotes, braces, or angle brackets to clarify the boundaries where necessary.
 
-**Use mapped diagnostic context (MDC) to distinguish logging from multiple threads.** It's almost impossible to gain an understanding of what's going on when logging output from multiple concurrent thread is interleaved. Including context information such as user/request IDs in individual log statements is tedious and repetitive. Instead, configure your logger's pattern to include such information on every line along with the timestamp.
+**Use mapped diagnostic context (MDC) to distinguish logging from multiple threads.** It's almost impossible to gain an understanding of what's going on when logging output from multiple concurrent thread is interleaved. Including context information such as user/request IDs in individual log statements is tedious and repetitive. Instead, configure your logger's pattern to include such information on every line as it does with the timestamp.
 
 
 ### Levels
@@ -580,7 +580,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 **Namespace selectors to avoid unintentionally affecting unwanted elements.** Class names and selectors are defined and operate in a global space (the page), so a strategy is necessary to consistently and easily avoid rules that affect unwanted elements. Examples include using a component's root class as a prefix all its style rules' selectors, BEM, and CSS Modules. Even with such a strategy, particular care is required to avoid parent components unintentionally affecting other components nested within them.
 
-**Avoid "reaching in" to subcomponents to add/override their styling.** Such styles are coupled to the child component's internal implementation (DOM and own styles), and are unlikely to be taken into consideration if that changes - making them fragile and hard to maintain. This is akin to using/modifying private state in object oriented programming. Instead, have the subcomponent support "option/mode classes" on its root, that parent components can apply to opt-in.
+**Avoid "reaching in" to nested components to add/override their styling.** Such styles are coupled to the nested component's internal implementation (DOM and own styles), and are unlikely to be taken into consideration if that changes - making them fragile and hard to maintain. This is akin to using/modifying private state in object oriented programming. Instead, have the nested component support "option/mode classes" on its root, that parent components can apply to opt-in.
 
 **Make components unopinionated about where/how they're used.** Styles affecting the outsides of a component's element, such as positioning/layout/spacing, should be left to be specified by the parent code that's using the component.
 
