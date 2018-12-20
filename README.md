@@ -529,7 +529,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# CSS
+# Tech: CSS
 
 
 ## General
@@ -600,7 +600,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# HTML
+# Tech: HTML
 
 **Avoid using the `id` attribute, generally.** It's not valid to use the same id value multiple times on a page. In an application composed of multiple components, some having multiple instances, it's easy to violate that requirement. The attribute is however useful for links that scroll to specific locations on the page.
 
@@ -616,7 +616,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# Java
+# Tech: Java
 
 *This is rather a short topic, as I worked mainly with other technologies while I gathered notes for this guide (2018).*
 
@@ -642,7 +642,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----------------------------------------
 
-# JavaScript
+# Tech: JavaScript
 
 **Avoid relying on the difference between `null` and `undefined`.** Doing so tends to cause fragile code. Use non-coercing equality (`==`) against `null` in equality checks for either of them. Avoid using both to signify a different kind of "no value" situation, such as "unknown field" vs. "no value for today".
 
