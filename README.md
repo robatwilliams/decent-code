@@ -121,7 +121,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 ## Code flow
 
 
-### General
+### General (code flow)
 
 **Avoid doing significant work in constructors.** This often limits flexibility around constructing and initialising the class, usually resulting in it being difficult to test.
 
@@ -132,7 +132,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Avoid running unnecessary code.** If the work is done and the return value is ready, then return. Running additional code wastes time, and obscures the intent for those reading it.
 
 
-### Methods
+### Methods (code flow)
 
 **Methods should stand alone, generally.** Avoid methods which always require a "companion method" to be called first/afterwards, for example to check preconditions or retrieve a result/error.
 
@@ -222,7 +222,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Minimise the odd, the unusual, and cleverness.** Prefer simplicity and clarity. Write boring code, and write it to help others (and your future self) rather than attempt to impress them.
 
 
-### General
+### General (general programming)
 
 **Prefer a functional approach to an imperative one.** Less mutable state and side-effects make code less error-prone, and easier to reason about.
 
@@ -253,7 +253,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Extract constants for magic numbers, generally.** There are however some cases where doing so adds noise, such as for zero.
 
 
-### Methods
+### Methods (general programming)
 
 **Avoid doing things the caller wouldn't reasonably expect.** The method name conveys expectations - avoid surprising side-effects.
 
@@ -305,7 +305,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 ## Error handling
 
 
-### General
+### General (error handling)
 
 **Throw exceptions in the domain of the method's interface.** This avoids breaching abstractions or application layers. For example, DAOs shouldn't throw HTTP exceptions, and neither should they propagate JDBC exceptions. Exceptions can be caught and wrapped in more appropriate ones to facilitate this.
 
@@ -352,7 +352,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 ## Logging
 
 
-### General
+### General (logging)
 
 **Bear in mind the purpose of logging.** The main ones are: determining if the application is running smoothly, and diagnosing what the problem is if it isn't running smoothly. Having these in mind helps when deciding if we should log, and if so, what information should be included. There should be some "tickover" `INFO` logging while the application is in use, to indicate that everything's fine. When things aren't fine, there should be `WARN` and `ERROR` logging to call attention to that, and detail what the problem is.
 
@@ -365,7 +365,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 **Avoid tightly coupled logging collaboration and dependencies.** Log messages should mostly be able to stand alone. They should remain meaningful if other distant log calls are modified or removed; that is, the complete log output should not be fragile. Avoid referring to, setting expectations of, building multi-message "sentences" in collaboration with, or relying on distant logging to "close off business you started".
 
 
-### Content
+### Content (logging)
 
 Write **clear, concise, and unambiguous messages.** Messages which follow these principles are quicker and easier to understand, and help avoid misinterpretation or confusion.
 
@@ -401,7 +401,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 ## Tests
 
 
-### General
+### General (tests)
 
 **Tests are code, too.** The items from the other topics in this guide apply. They require code review, and are subject to the same automated and manual quality checks and rules as the main code. Poor test code is less reliable, and can make it difficult to change or refactor the main code.
 
@@ -532,7 +532,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 ## Tech: CSS
 
 
-### General
+### General (CSS)
 
 **CSS is code, too.** The items from the other topics in this guide apply. It requires code review, and is subject to automated and manual quality checks and rules - just like any other application code. Poor CSS is difficult to modify and extend, and can make it difficult to change or refactor the application.
 
@@ -586,7 +586,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 *For more on writing scalable CSS, I recommend this ["8 simple rules for a robust, scalable CSS architecture"](https://github.com/jareware/css-architecture) guide by Jarno Rantanen.*
 
 
-### Comments
+### Comments (CSS)
 
 **Document browser bug workarounds.** Doing so highlights and explains unusual or confusing styles, for the benefit of your future self and others. For well-known issues, this can be done concisely with a short phrase and a link to e.g. [flexbugs](https://github.com/philipwalton/flexbugs#flexbug-1).
 
@@ -707,7 +707,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 ## Commits
 
 
-### Content
+### Content (commits)
 
 **One logical piece of work per commit.** Separate each feature, bug and refactoring from other ones. This makes for a more useful history, and also encourages an organised approach to carrying out work. If you need to fix a bug while working on a feature, consider temporarily putting away your feature changes using a source control feature such as [Git's stash](https://git-scm.com/docs/git-stash).
 
@@ -758,7 +758,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 ----
 
 
-### General
+### General (pull request)
 
 **Strive for small pull requests.** Large pull requests are harder to review, resulting in poorer feedback, unnoticed problems, "speed reviewing", and slow progress towards approval. If you're unable to split up work items for large features (due to process or politics), consider an incremental technique involving a series of smaller (e.g. 200-400 line) pull requests into a "collector branch" culminating in a single big pull request from that branch to the master/trunk.
 
