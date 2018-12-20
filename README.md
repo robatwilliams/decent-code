@@ -3,6 +3,8 @@
 
 A guide/checklist to help people level-up their coding and code-reviewing.
 
+Much of it is fairly general, but reflects my focus on web frontend applications.
+
 [Jump to Contents](#contents)
 
 
@@ -19,7 +21,6 @@ I hope it can help you write better code, be a more effective reviewer, and piqu
 
 
 ### Code review
-
 Code review is more than a checklist process, but many of the things we look for are simple and there are too many of them to remember. Checklists help us remember, and inform contributors upfront of expectations. This helps reviewers' time to be better spent on the bigger and less simple things, and reduce contributors' time spent on revisions.
 
 Those items that can be automated should be (using tools like ESLint and its plugins, or Checkstyle). Manual detection and correction isn't reliable, doesn't scale well, and consumes focus better spent elsewhere.
