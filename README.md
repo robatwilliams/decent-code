@@ -7,13 +7,15 @@ A guide/checklist to help people level-up their coding and code-reviewing.
 
 
 ### Motivation
-It can be hard to maintain consistency and quality while scaling code review.
+Where does one start when looking to write better code? And how do we maintain code quality and consistency when working in a team?
 
-It's rarely practical for everyone or any one person to review every single line of code, while also getting on with their own work and responsibilities. As reviewers we all have our own experience, technical/project knowledge, and proficiency level. Individually applying these improves code quality, but it's a reactive approach and tends not to be consistent.
+Code review is a great way of doing these, through feedback and sharing of knowledge. It is however a reactive approach, tends not to be done consistently, and is hard to scale well. By having, and through creating/adapting, a shared reference for practices and quality, a team can go some way towards overcoming these issues.
 
-By having, and through creating, a shared reference for practices and quality, a team can go some way towards overcoming these issues.
+It's rarely practical for everyone or any one person to review every single line of code, while also getting on with their own work and responsibilities. As reviewers we all have our own experience, technical/project knowledge, and proficiency level. We can get more out of these through sharing them with others, than by individually applying our own.
 
-This is a personal guide, based on some of the things I look out for. I hope it can help you write better code, be a more effective reviewer, and pique your interest in further learning.
+This is a personal guide, based on some of the things I look out for. Not everyone will agree with all of it, but I think it's mostly reasonable.
+
+I hope it can help you write better code, be a more effective reviewer, and pique your interest in further learning.
 
 
 ### Code review
@@ -24,7 +26,7 @@ Those items that can be automated should be (using tools like ESLint and its plu
 
 
 ### What this isn't
-This isn't a style guide, a declaration of The Right Way, a comprehensive guide to writing good code and being a good contributor, or a shortcut to becoming a good developer. Things that should be picked up by appropriately configured automated tools are generally not mentioned. To read about review process, conduct, collaboration, and tools, check out [the code review awesome list](https://github.com/joho/awesome-code-review).
+This isn't a style guide, a declaration of The Right Way, a comprehensive/definitive guide to writing good code and being a good contributor, or a shortcut to becoming a good developer. I don't expect everyone to agree with all of it. Things that should be picked up by appropriately configured automated tools are generally not mentioned. To read about review process, conduct, collaboration, and tools, check out [the code review awesome list](https://github.com/joho/awesome-code-review).
 
 
 ### Contents
