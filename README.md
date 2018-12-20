@@ -28,29 +28,29 @@ This isn't a style guide, a declaration of The Right Way, a comprehensive guide 
 
 
 ## Contents
-1. [Naming things](topics/naming-things.md)
-1. [Code flow](topics/code-flow.md)
-1. [Code structure](topics/code-structure.md)
-1. [General programming](topics/general-programming.md)
-1. [Functional](topics/functional.md)
-1. [Error handling](topics/error-handling.md)
-1. [Logging](topics/logging.md)
-1. [Tests](topics/tests.md)
-1. [Files](topics/files.md)
-1. [Formatting](topics/formatting.md)
-1. [Dependencies](topics/dependencies.md)
+1. [Naming things](#naming-things)
+1. [Code flow](#code-flow)
+1. [Code structure](#code-structure)
+1. [General programming](#general-programming)
+1. [Functional](#functional)
+1. [Error handling](#error-handling)
+1. [Logging](#logging)
+1. [Tests](#tests)
+1. [Files](#files)
+1. [Formatting](#formatting)
+1. [Dependencies](#dependencies)
 1. Tech specifics
-   1. [CSS](topics/tech-css.md)
-   1. [HTML](topics/tech-html.md)
-   1. [Java](topics/tech-java.md)
-   1. [JavaScript](topics/tech-javascript.md)
-1. [Comments](topics/comments.md)
-1. [Commits](topics/commits.md)
-1. [Pull request](topics/pull-request.md)
-1. [Features](topics/features.md)
-1. [UI text](topics/ui-text.md)
-1. [Bug fixes](topics/bug-fixes.md)
-1. [Meta](topics/meta.md)
+   1. [CSS](#tech-css)
+   1. [HTML](#tech-html)
+   1. [Java](#tech-java)
+   1. [JavaScript](#tech-javascript)
+1. [Comments](#comments)
+1. [Commits](#commits)
+1. [Pull request](#pull-request)
+1. [Features](#features)
+1. [UI text](#ui-text)
+1. [Bug fixes](#bug-fixes)
+1. [Meta](#meta)
 
 
 ## Further reading
@@ -157,7 +157,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 ## Handling unhappy path situations
 
-**Fail early and loud, rather than later/quietly.** Detect problems at the earliest opportunity, and make them visible, for example by throwing an error. Avoid detecting and then hiding problems silently by skipping some code or using a default value. Examples include initialisation checks, validity checks, method preconditions, and API response status checks. See [Functional](functional.md) > fail fast.
+**Fail early and loud, rather than later/quietly.** Detect problems at the earliest opportunity, and make them visible, for example by throwing an error. Avoid detecting and then hiding problems silently by skipping some code or using a default value. Examples include initialisation checks, validity checks, method preconditions, and API response status checks. See [Functional](#functional) > fail fast.
 
 **Defensive code vs. strict expectations.** Writing defensive code to be accommodating of surrounding problems is an approach that can be used to make applications more robust - working around problems instead of allowing them to cause a failure. A major downside however, is that it makes those problems less visible - in turn making them less likely to be noticed and addressed. It also complicates the code with possibly unnecessary "just in case" handling. For a given area of your application, weigh up the costs and benefits to help decide whether a defensive or strict approach is most appropriate. At a system boundary where an application is interacting with something external outside its control for example, the case for being defensive is more likely to be compelling.
 
@@ -178,14 +178,14 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 **Avoid non-trivial nested functions/lambdas.** Code can often be made clearer by extracting them to top-level or member functions.
 
-**Strive to only depend on close/related things.** Changing far-away code/behaviour shouldn't break things. Where unavoidable, document such relationships. See [comments](comments.md).
+**Strive to only depend on close/related things.** Changing far-away code/behaviour shouldn't break things. Where unavoidable, document such relationships. See [comments](#comments).
 
 
 ## Separation and encapsulation of responsibilities
 
 **Avoid mixing different types of responsibilities in the same class/method.** Each one should generally be involved in one kind of responsibility. Avoid mixing data structure manipulation with business logic, or UI behaviour logic with the DOM operations that carry it out, for example.
 
-**Avoid breaching separation of layers.** There is almost always a way of achieving what's needed, without resorting to this. Concepts within each layer should remain abstracted away (i.e. not at all visible) to lower or higher layers. For example, a data layer has no awareness of HTTP requests or response codes, and a service layer has no awareness of JDBC. See [error handling](error-handling.md).
+**Avoid breaching separation of layers.** There is almost always a way of achieving what's needed, without resorting to this. Concepts within each layer should remain abstracted away (i.e. not at all visible) to lower or higher layers. For example, a data layer has no awareness of HTTP requests or response codes, and a service layer has no awareness of JDBC. See [error handling](#error-handling).
 
 **Avoid violating or by-passing applied design patterns.** When patterns or other design features have been put in place, avoid by-passing, subverting, or dismantling them.
 
@@ -237,7 +237,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 **Favour immutability.** Immutable objects are generally simpler and less error-prone to use than mutable ones. This is especially true in a multi-threaded context.
 
-**Prevent construction of invalid objects.** Invalid objects will typically cause a problem sooner or later. It's better to fail early (see: [code flow](code-flow.md)) by having their constructor/factory validate them.
+**Prevent construction of invalid objects.** Invalid objects will typically cause a problem sooner or later. It's better to fail early (see: [code flow](#code-flow)) by having their constructor/factory validate them.
 
 **Avoid passing around partially initialised/populated objects.** Doing so makes it difficult to follow the creation process, and risks them being used before initialisation is finished.
 
@@ -282,11 +282,11 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 # Functional
 
-**The feature works in all supported browsers.** This includes aspects off the main usage path for the feature. Internet Explorer in particular needs watching out for. See [Tech: JavaScript](tech-javascript.md) > feature support.
+**The feature works in all supported browsers.** This includes aspects off the main usage path for the feature. Internet Explorer in particular needs watching out for. See [Tech: JavaScript](#tech-javascript) > feature support.
 
 **The feature works in the "prod mode" build (if applicable).** Development modes, which are often used to improve the developer experience (productivity), make the running application less like what the production version will be. Testing while using such modes can result in undetected problems, and also typically reduces performance.
 
-**Error cases are handled.** Depending on the nature of the error, this includes: detection, logging, recovery/abort, and notifying the user. See [error handling](error-handling.md).
+**Error cases are handled.** Depending on the nature of the error, this includes: detection, logging, recovery/abort, and notifying the user. See [error handling](#error-handling).
 
 **Fail fast, and fail proactively.** Detect problems at the earliest opportunity, and make them immediately and clearly visible (e.g. log, UI message, application abortion). Avoid allowing the application to continue into undefined states - hoping for the best. The "fast and proactive" strategy makes problems from many facets (e.g. code, configuration, infrastructure) easier to find and diagnose, findable sooner, and helps avoid collateral damage. For example, an application would fail at startup if a database/API connection cannot be established - rather than doing so the first time its API is called. Another example: an application would fail at startup if the configuration (or permutation of user permissions) is invalid - rather than doing so if/when a particular feature is used, falling back to a default value, or continuing execution anyway.
 
@@ -341,7 +341,7 @@ This Gist may be useful: [List of names that tend to be useful in programming](h
 
 **Only ask the user to try again if the problem is transient.** Trying again after a connection problem may well work. Trying again with the same invalid form input certainly won't.
 
-*Also see: [UI text](ui-text.md)*
+*Also see: [UI text](#ui-text)*
 
 
 
@@ -385,7 +385,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 ----
 
-*Also see: [Error handling](error-handling.md)*
+*Also see: [Error handling](#error-handling)*
 
 *Further reading:*
 * *[The Art of Logging](https://www.codeproject.com/Articles/42354/The-Art-of-Logging), by Colin Eberhardt*
@@ -405,7 +405,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 **Tests are code, too.** The items from the other topics in this guide apply. They require code review, and are subject to the same automated and manual quality checks and rules as the main code. Poor test code is less reliable, and can make it difficult to change or refactor the main code.
 
-**Keep test code close to the code they're testing.** Read: [files](files.md).
+**Keep test code close to the code they're testing.** Read: [files](#files).
 
 **Single focus and purpose per test.** Tests with wide scope are less clear, and make it harder to identify the cause of failures. Aim for failures only related to the case described in the test name, and make assertions as required.
 
@@ -459,7 +459,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 # Files
 
-**Named well and as per conventions.** Refer to [naming things](naming-things.md). Follow project conventions (e.g. suffixes) and casing style.
+**Named well and as per conventions.** Refer to [naming things](#naming-things). Follow project conventions (e.g. suffixes) and casing style.
 
 **In an appropriate folder.** Considerations include purpose and functional area.
 
@@ -536,7 +536,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 **CSS is code, too.** The items from the other topics in this guide apply. It requires code review, and is subject to automated and manual quality checks and rules - just like any other application code. Poor CSS is difficult to modify and extend, and can make it difficult to change or refactor the application.
 
-**Keep CSS close to the component code that it styles.** Read: [files](files.md).
+**Keep CSS close to the component code that it styles.** Read: [files](#files).
 
 **Resolve design inconsistencies.** UI designs are sometimes inconsistent in their styling, for example spacings or colours. Avoid carrying these over to the application's style code; not only do inconsistencies detract from the product, but they also tend to drive poor CSS. Some inconsistencies are trivial, while others need discussion with designers.
 
@@ -592,7 +592,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 **Explain the choice of non-obvious "magic values" such as widths and spacings.** Documenting these allows future changes to be made with greater confidence, and avoid regressions. Widths chosen to fit particular longest-expected values are an example.
 
-*Also see: [Comments](comments.md)*
+*Also see: [Comments](#comments)*
 
 
 
@@ -688,7 +688,7 @@ Write **clear, concise, and unambiguous messages.** Messages which follow these 
 
 **Explain the choice of particular "magic values".** These include framework/server settings, timeouts, limits, batch/pool sizes, priorities, cache configuration, and orderings. We're familiar with extracting such values from our code into constants or configuration, but the reasons behind choosing the actual value is often left out. In some cases, this is after spending significant effort on activities such as load testing in order to choose appropriate values. Documenting these allows future changes to be made with greater confidence.
 
-**Highlight bug workarounds, linking to an issue report.** This allows them to be easily identified and removed at a later date when the underlying bug (e.g. in a library) has been fixed. See [bug fixes](bug-fixes.md).
+**Highlight bug workarounds, linking to an issue report.** This allows them to be easily identified and removed at a later date when the underlying bug (e.g. in a library) has been fixed. See [bug fixes](#bug-fixes).
 
 **Document relationships between distant and disconnected parts of the code.** It's quite rare that these can't be made explicit through code. They are often things that are a certain way because something else far away (could even be in a downstream system) is a certain way - such as dependencies, or matching behaviours. Changing one could break the other in a surprising way, or introduce inconsistency in the user experience.
 
@@ -719,7 +719,7 @@ Follow the project's **strategy for managing TODO comments.** Buildup of such co
 
 **Address or remove relevant existing and new TODO comments.** Existing ones may refer to the now-completed work. New ones may be temporary and require removal, or refer to issue tracker tickets for later work.
 
-**Avoid including unrelated and unexplained changes.** An extension of the first item. Such changes are often [formatting](formatting.md) issues, or mistakes made while resolving merge/rebase conflicts.
+**Avoid including unrelated and unexplained changes.** An extension of the first item. Such changes are often [formatting](#formatting) issues, or mistakes made while resolving merge/rebase conflicts.
 
 **Avoid including left-over unused code.** Such code is often from experimentation, trying different approaches, or trial-and-error. It may not be having an effect, or even running at all. CSS in particular tends to be quite susceptible to this.
 
